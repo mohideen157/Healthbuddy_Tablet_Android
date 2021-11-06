@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="data"
+            type="indg.com.cover2protect.model.medicalreport.medical_report_get.Data" />
+    </data>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/item_layout"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_five"
+    android:layout_marginBottom="4dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/margin_five"
+    app:cardElevation="@dimen/margin_ten">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/margin_five"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_fourteen"
+                android:fontFamily="@font/robotoregular"
+                android:textColor="@color/defaultTextColor"
+                android:padding="@dimen/margin_five"
+                android:text="@string/date"/>
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_fourteen"
+                android:fontFamily="@font/robotoregular"
+                android:textColor="@color/defaultTextColor"
+                android:padding="@dimen/margin_five"
+                android:text="@{data.created_at}"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/heartRateItem"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/heartRateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ssprolight"
+                    android:text="@string/heart_rate"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="@dimen/text_ten" />
+
+                <TextView
+                    android:id="@+id/heartRateView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/ssprolight"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="@dimen/text_sixteen"
+                    android:text="@{data.heart_rate}"/>
+
+                <TextView
+                    android:id="@+id/heartRateUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/heartRateView"
+                    android:layout_marginStart="8dp"
+                    android:layout_toRightOf="@id/heartRateView"
+                    android:fontFamily="@font/ssprolight"
+                    android:text="@string/heart_rate_unit"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="@dimen/text_ten" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bloodPressureItem"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_fourty"
+                android:layout_marginStart="@dimen/margin_eight"
+                android:layout_marginEnd="@dimen/margin_eight"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/bloodPressureLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ssprolight"
+                    android:text="@string/blood_pressure"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="@dimen/text_ten" />
+
+                <TextView
+                    android:id="@+id/bloodPressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/ssprolight"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="@dimen/text_sixteen"
+                    tools:text="@{data.bp}" />
+
+                <TextView
+                    android:id="@+id/bpUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/bloodPressure"
+                    android:layout_marginStart="@dimen/margin_five"
+                    android:layout_toRightOf="@id/bloodPressure"
+                    android:fontFamily="@font/ssprolight"
+                    android:text="@string/bp_unit"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="@dimen/text_ten" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pwvItem"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_fourty"
+                android:layout_marginEnd="@dimen/margin_eight"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/pwvLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ssprolight"
+                    android:text="@string/ldlcholestrol"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="@dimen/text_eight" />
+
+                <TextView
+                    android:id="@+id/pwvValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/ssprolight"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="@dimen/text_sixteen"
+                    tools:text="@{data.ldl_cholesterol}" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row1"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/afibItem"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/afibLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ssprolight"
+                    android:text="@string/glucosef"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="@dimen/text_eight" />
+
+                <TextView
+                    android:id="@+id/afibValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/ssprolight"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="@dimen/text_sixteen"
+                    android:text="@{data.sugar_fasting}" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/arrhythmiaItem"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/arrhythmiaLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ssprolight"
+                    android:text="@string/glucosepp"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="@dimen/text_eight" />
+
+                <TextView
+                    android:id="@+id/arrhythmiaValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/ssprolight"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="@dimen/text_sixteen"
+                    tools:text="@{data.sugar_non_fasting}" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hrvLevelItem"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_fourty"
+                android:layout_marginStart="@dimen/margin_eight"
+                android:layout_marginEnd="@dimen/margin_eight"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/hrvLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ssprolight"
+                    android:text="@string/triglyceride"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="@dimen/text_eight" />
+
+                <TextView
+                    android:id="@+id/hrvLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/ssprolight"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="@dimen/text_sixteen"
+                    tools:text="@{data.triglycerides}" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/eventIdItem"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/eventIdLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ssprolight"
+                    android:text="@string/hdlcholestrol"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="@dimen/text_eight" />
+
+                <TextView
+                    android:id="@+id/eventId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/ssprolight"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="@dimen/text_sixteen"
+                    android:text="@{data.hdl_cholesterol}" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/customactivityoncrash_activity_vertical_margin"
+            android:paddingLeft="@dimen/customactivityoncrash_activity_horizontal_margin"
+            android:paddingRight="@dimen/customactivityoncrash_activity_horizontal_margin"
+            android:paddingTop="@dimen/customactivityoncrash_activity_vertical_margin">
+
+            <ImageView
+                android:id="@+id/customactivityoncrash_error_activity_image"
+                android:layout_width="@dimen/margin_hundreadeighty"
+                android:layout_height="@dimen/margin_fifty"
+                android:contentDescription="@null"
+                android:src="@drawable/logonew1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/customactivityoncrash_activity_vertical_margin"
+                android:gravity="center"
+                android:fontFamily="@font/playfairdisplayregular"
+                android:text="@string/servererror"
+                android:textSize="@dimen/text_sixteen"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/customactivityoncrash_error_activity_restart_button"
+                android:layout_width="match_parent"
+                android:background="@drawable/buttonshape"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:layout_marginRight="@dimen/margin_twenty"
+                android:fontFamily="@font/playfairdisplayregular"
+                android:layout_height="@dimen/margin_fiftysix"
+                android:layout_marginTop="@dimen/customactivityoncrash_activity_vertical_margin"
+                android:text="@string/customactivityoncrash_error_activity_close_app" />
+
+            <Button
+                android:id="@+id/customactivityoncrash_error_activity_more_info_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/playfairdisplayregular"
+                android:text="@string/customactivityoncrash_error_activity_error_details"
+                android:textColor="@color/colorAccent" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

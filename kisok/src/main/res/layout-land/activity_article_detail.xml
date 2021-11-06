@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".views.activity.article.ArticleDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAccent"
+            app:titleTextColor="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_ten"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/article_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ssproregular"
+            android:text="@string/article"
+            android:textColor="@color/fbutton_color_midnight_blue"
+            android:textSize="@dimen/text_sixteen" />
+
+        <ImageView
+            android:id="@+id/article_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_hundreadfifty"
+            android:layout_marginTop="@dimen/margin_twenty"
+            android:scaleType="fitXY"
+            android:src="@drawable/article_img" />
+
+        <TextView
+            android:id="@+id/article_desc"
+            android:layout_marginTop="@dimen/margin_twenty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ssprolight"
+            android:text="@string/article"
+            android:textSize="@dimen/text_sixteen" />
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+</layout>

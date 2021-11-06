@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/profile_ll"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/homepage"/>
+
+        <item
+            android:id="@+id/ep_ll"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/editProfile"/>
+        <item
+            android:id="@+id/history_ll"
+            android:icon="@drawable/ic_history_black_24dp"
+            android:title="@string/history"/>
+
+        <item
+            android:id="@+id/nutrionhis_ll"
+            android:icon="@drawable/nutritionic"
+            android:title="@string/nutrition"/>
+
+        <item
+            android:id="@+id/howtouse_ll"
+            android:icon="@drawable/ic_developer_mode_black_24dp"
+            android:title="@string/howtouse"/>
+        <item
+            android:id="@+id/connectdev_ll"
+            android:icon="@drawable/ic_bluetooth_black_24dp"
+            android:title="@string/connectdevice"/>
+
+        <item
+            android:id="@+id/logout_ll"
+            android:icon="@drawable/ic_lock_black_24dp"
+            android:title="@string/logout"/>
+
+    </group>
+
+
+</menu>

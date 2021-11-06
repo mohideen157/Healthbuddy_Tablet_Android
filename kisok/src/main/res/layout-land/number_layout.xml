@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+        <variable
+            name="Numbermodel"
+            type="indg.com.cover2protect.model.count.Digits_Model"/>
+
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+ <RelativeLayout
+     android:id="@+id/number_rl"
+     android:layout_width="@dimen/margin_fiftysix"
+     android:layout_height="@dimen/margin_fiftysix">
+
+     <TextView
+         android:id="@+id/number"
+         android:layout_marginLeft="@dimen/margin_fifteen"
+         android:layout_marginRight="@dimen/margin_five"
+         android:layout_marginTop="@dimen/margin_five"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@{Numbermodel.name}"
+         android:layout_centerInParent="true"
+         android:textAlignment="center"
+         android:textSize="@dimen/text_fourteen"
+         android:textColor="@color/white"
+         />
+
+ </RelativeLayout>
+
+
+</LinearLayout>
+</layout>

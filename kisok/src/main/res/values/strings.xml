@@ -1,0 +1,504 @@
+<resources>
+
+    <string name="action_settings">Settings</string>
+    <string name="interneterror">Check Internet Connection</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="cancel">Cancel</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Don\'t have an account?</string>
+    <string name="permission_rationale">Location data is used as part of the Google Fit API</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core
+        functionality.</string>
+    <string name="verify">Verifying your number!</string>
+    <string name="resend">Resend OTP?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">SKIP</string>
+    <string name="nationalid">ENTER NATIONAL ID</string>
+    <string name="profile_info">This will help us to connect you with government health services</string>
+    <string name="select_blood">Select Blood Group</string>
+    <string name="occupation_txt">Occupation</string>
+    <string name="gov_txt">Government</string>
+    <string name="privatecom_txt">Private Company</string>
+    <string name="selfemp_txt">Self Employed</string>
+    <string name="nonprofit_txt">Non-Profit Organization</string>
+    <string name="other_txt">Other</string>
+    <string name="weekly_txt">Weekly</string>
+    <string name="monthly_txt">Monthly</string>
+    <string name="yearly_txt">Yearly</string>
+    <string name="freq_txt">Frequency</string>
+    <string name="diettype_txt">Diet Type</string>
+    <string name="veg_txt">Vegetarian</string>
+    <string name="nonveg_txt">Non-Vegetarian</string>
+    <string name="vegan_txt">Vegan</string>
+    <string name="egg_txt">Eggetarian</string>
+    <string name="keto_txt">Ketogenic</string>
+    <string name="paleo_txt">Paleo</string>
+    <string name="jain_txt">Jain</string>
+    <string name="vegconsumption_txt">Average quantity of vegetables consumed </string>
+    <string name="fruitconsumption_txt">How many cups of fruits you had in the </string>
+    <string name="cerealsconsumption_txt">Average quantity of cereals consumed </string>
+    <string name="cerealsconsumption_info">1 = 1 standard tandoor roti /bread slice equivalent</string>
+    <string name="fastfoodconsumption_txt">Average quantity of fast food consumed in the </string>
+    <string name="fastfoodconsumption_info">1 = 1 burger, 1 slice pizza</string>
+    <string name="drinkconsumption_txt">Drinks (juice, soda, cola) taken in the </string>
+    <string name="drinkconsumption_info">1 = 1 glass</string>
+    <string name="alcoholconsumption_txt">Do you take alcohol</string>
+    <string name="yes_txt">Yes</string>
+    <string name="no_txt">No</string>
+    <string name="alcoholintake_txt">Alcohol Intake</string>
+    <string name="daily_txt">Daily</string>
+    <string name="Addmore_txt">Add More</string>
+    <string name="smokingconsumption_txt">Smoking</string>
+    <string name="smokingconsumption_info">Choose Smoking Start and End Age</string>
+    <string name="smokingconsumption_info1">Choose number of cigarettes smoked</string>
+    <string name="tobacco_info">Choose consumption of non smoking tobacco</string>
+    <string name="vigorousexcercise_txt">In the , how much time did you spend doing vigorous intensity physical activity?</string>
+    <string name="vigorous_info">1 = 1 hour</string>
+    <string name="moderateexcercise_txt">In the , how much time did you spend doing moderate intensity physical activity?</string>
+    <string name="lightintensity_txt">In the , how much time did you spend doing light intensity physical activity?</string>
+    <string name="Diabetic_txt">Are you Diabetic?</string>
+    <string name="Diabetic_info1">1.  Taking Medicine with Normal Sugar Levels</string>
+    <string name="Diabetic_info_1">Taking Medicine with Normal Sugar Levels</string>
+    <string name="Diabetic_info2">2.  Taking Medicine but Higher Sugar Levels</string>
+    <string name="Diabetic_info_2">Taking Medicine but Higher Sugar Levels</string>
+    <string name="Diabetic_info3">3.  Controlling HbA1C below 7  without medicines</string>
+    <string name="Diabetic_info_3">Controlling HbA1C below 7  without medicines</string>
+    <string name="Diabetic_info4">4.  Not taking medicine and HbA1C above 7</string>
+    <string name="Diabetic_info_4">Not taking medicine and HbA1C above 7</string>
+    <string name="bloodcholestrol_txt">Total Blood Cholesterol </string>
+    <string name="bloodch_info1">Less than 200</string>
+    <string name="bloodch_info2">200–240</string>
+    <string name="bloodch_info3">More than 240</string>
+    <string name="bloodpressure_txt">Blood Pressure</string>
+    <string name="systolic_txt">Enter Systolic Blood Pressure</string>
+    <string name="dys_txt">Enter Diastolic Blood Pressure</string>
+    <string name="heartailment_txt">Have you been diagnosed to have any heart related ailment?</string>
+    <string name="ques1_text">Coronary artery disease/ ischemic heart disease</string>
+    <string name="ques2_text">Have you ever suffered from Angina pain?</string>
+    <string name="ques3_text">Are you under regular medication for the same?</string>
+    <string name="ques4_text">Have you suffered a heart attack?</string>
+    <string name="ques5_text">Do you have an abnormal ECG for which you are being treated?</string>
+    <string name="ques6_text">Have you undergone coronary angiography?</string>
+    <string name="ques7_text">Have you undergone bypass surgery?</string>
+    <string name="ques8_text">Have you undergone stent placement?</string>
+    <string name="ques9_text">Have you undergone any valve surgery  / procedure?</string>
+    <string name="stroke_txt">Have you suffered from stroke?</string>
+    <string name="strokereason_txt">Reason for stroke?</string>
+    <string name="strokereason_info1">Clot</string>
+    <string name="strokereason_info2">Bleed</string>
+    <string name="strokereason_info3">Embolus</string>
+    <string name="tia_txt">Have you ever been diagnosed to have a TIA(Transient Ischemic Attack)</string>
+    <string name="tiatreatment_txt">Are you under regular treatment for the same?</string>
+    <string name="preexist_txt">Do you have any pre-existing medical conditions/diseases?</string>
+    <string name="anyallergy_txt">Are you having any allergies?</string>
+    <string name="medication_txt">Are you taking any regular medication?</string>
+    <string name="username">Username</string>
+    <string name="mobile">Mobile</string>
+    <string name="NetworkError">Check Internet Connection</string>
+
+    <string name="invalidMobile">Invalid Mobile Number</string>
+    <string name="healthtrack">Health Tracker</string>
+    <string name="healthtrackinfo">Use a smart device to track your health vitals like blood pressure, heart rate,ECG, pulse and much more</string>
+    <string name="medicalhistory">Medical History</string>
+    <string name="medicalhistoryinfo">Upload your medical history, lab results, and medical reports through the App
+and share it with your doctor as you book an appointment with doctor</string>
+    <string name="labtest">Book Lab Tests</string>
+    <string name="labtestinfo">Book a lab test and get your medical samples collected by collection agents at your  door step</string>
+    <string name="ordermedicine">Order Medicines</string>
+    <string name="ordermedicineinfo">Order medicine online and get them delivered at your doorstep</string>
+    <string name="hr_title">Heart rate </string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="error_title">Something went wrong!</string>
+    <string name="restart_app">Restart app</string>
+    <string name="close_app">Close app</string>
+    <string name="signuptext">Already have account?</string>
+    <string name="ValidMobile">Enter Valid Mobile Number</string>
+    <string name="PasswordValidation">Must contains 8 digit passwords includes a digit,lowercase,uppercase and special Character must occur at least once</string>
+    <string name="next">NEXT</string>
+    <string name="start">GOT IT</string>
+    <string name="customactivityoncrash_error_activity_restart_app">Restart app</string>
+    <string name="customactivityoncrash_error_activity_close_app">Close app</string>
+    <string name="customactivityoncrash_error_activity_error_details">Error details</string>
+    <string name="customactivityoncrash_error_activity_error_details_title">Error details</string>
+    <string name="customactivityoncrash_error_activity_error_details_close">Close</string>
+    <string name="customactivityoncrash_error_activity_error_details_copy">Copy to clipboard</string>
+    <string name="customactivityoncrash_error_activity_error_details_copied">Copied to clipboard</string>
+    <string name="customactivityoncrash_error_activity_error_details_clipboard_label">Error information</string>
+    <string name="Fieldempty">Field\'s can\'t be empty</string>
+    <string name="very_severely_underweight">Very Severely Underweight</string>
+    <string name="severely_underweight">Severely Underweight</string>
+    <string name="underweight">Underweight</string>
+    <string name="normal">Normal</string>
+    <string name="overweight">Overweight</string>
+    <string name="obese_class_i">Moderately Obese</string>
+    <string name="obese_class_ii">Severely Obese</string>
+    <string name="obese_class_iii">Very Severely Obese</string>
+    <string name="removemore_txt">Remove</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="heart_rate">Heart rate</string>
+    <string name="heart_rate_unit">bpm</string>
+    <string name="blood_pressure">Blood pressure</string>
+    <string name="blood_pressure_value">%1$d/%2$d</string>
+    <string name="bp_unit">mmHg</string>
+    <string name="afib_label">AFIB</string>
+    <string name="arrhythmia_label">Arrhythmia</string>
+    <string name="hrv_label">Stress level</string>
+    <string name="pulse">PULSE</string>
+    <string name="rpwv">rPWV</string>
+    <string name="swipe">Swipe to get More Values</string>
+    <string name="height">HEIGHT(cm)</string>
+    <string name="weight_text">WEIGHT(kg)</string>
+    <string name="bandconnect">Health Band Connectivity</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
+    <string name="snack">Snack</string>
+    <string name="date">DATE</string>
+    <string name="time">TIME</string>
+    <string name="submit">Submit</string>
+    <string name="systolic_dia">SYS/DIA</string>
+    <string name="foodname">Food Name</string>
+    <string name="calories">Calories</string>
+    <string name="nf_total_fat">Total Fat</string>
+    <string name="saturated_fat">Saturated Fat</string>
+    <string name="cholesterol">Cholesterol</string>
+    <string name="protein">Protein</string>
+    <string name="sodium">Sodium</string>
+    <string name="nf_total_carbohydrate">Carbohydrate</string>
+    <string name="nf_dietary_fiber">Dietary Fiber</string>
+    <string name="save">Save</string>
+    <string name="name">Full Name</string>
+
+    <string name="tenant">Select Tenant</string>
+    <string name="lovedonedetail">Details of Loved One\'s</string>
+    <string name="lovedonename">Lovedone Name</string>
+    <string name="relation">Relation</string>
+    <string name="gender">Gender</string>
+    <string name="lovedones">Lovedone</string>
+    <string name="bg">Select Blood Group</string>
+    <string name="nutritiondetail">Nutrition</string>
+    <string name="dosage">Enter Dosage</string>
+    <string name="medication">Medication</string>
+    <string name="syrup">Syrup</string>
+    <string name="tablet">Tablet</string>
+    <string name="vial">Vial</string>
+    <string name="result">Result</string>
+    <string name="hhi">Healthy Heart Index</string>
+
+    <string name="rpwv_unit">m/s</string>
+    <string name="afib_unit">time(s)</string>
+
+    <string-array name="bg_array">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+
+    <string-array name="activities">
+        <item>Walking</item>
+        <item>Walking (fitness)</item>
+        <item>Walking (treadmill)</item>
+        <item>Walking (stroller)</item>
+        <item>On foot</item>
+    </string-array>
+
+    <string name="about">About</string>
+
+    <string name="settings">Settings</string>
+    <string name="nodata">No Data</string>
+    <string name="Travel_txt_national">Travel Frequency(Domestic - Within Country)</string>
+    <string name="Travel_txt_international">Travel Frequency(International - Outside Country)</string>
+    <string name="forgot_pass">Forgot Password</string>
+    <string name="Systolicval">120</string>
+    <string name="diaval">80</string>
+    <string name="result_text">Your risk of having  a Heart Attack or Stroke within the next 5 years  </string>
+    <string name="imagedialog">SELECT IMAGE</string>
+    <string name="image_text">PICK IMAGE FROM GALLERY OR CAPTURE FROM CAMERA</string>
+    <string name="hereditaryques">Does anyone in your immediate family (parents / siblings) has or had one of the following conditions:</string>
+    <string name="hereditaryques1_text">Heart related condition</string>
+    <string name="hereditaryques2_text">Diabetes</string>
+    <string name="hereditaryques3_text">High Cholestrol</string>
+    <string name="zero">0</string>
+    <string name="arrythmia0">0: Normal Rhythm</string>
+    <string name="arrythmia1">1: Bradycardia</string>
+    <string name="arrythmia2">2: Tachycardia</string>
+    <string name="arrythmia3">3: Others Arrhythmia</string>
+    <string name="arrythmiacount">Arrhythmia count (counter)</string>
+    <string name="aboutarrythmia">An arrhythmia is a problem with the rate of rhythm of your heartbeat. During an arrhythmia, your heart can beat too fast , too slow or with an irregular pattern. If the heart beats too slow, it is called bradycardia, which can cause insufficient blood flow to the brain and cause heart failure. Bradycardia usually be corrected with an artificial pacemaker. If the heart beats too fast , it is called tachycardia, which may be sign of a problem with the heart\'s electrical system and can cause shortness of breath,chest pain,dizziness. If arrhythmia is detected frequently, further doctoral diagnose is highly recommended.</string>
+    <string name="aboutafib">Atrial Fibrillation (or AFib) is the most common serious abnormal heart rhythm characterized by rapid and irregular beating. Episodes of AFib can come and go, or you may develop AFib that doesn\'t go away. AFib can lead to blood clots forming in the heart that may circulate to other organs and lead to blocked blood flow. AFib will increase stroke risk by 5 times and death risk by 2 times</string>
+    <string name="aboutrpwv">rPWV stands for heart-radial pulse wave velocity, which is the velocity for the pulse wave to travel from your heart to your radial artery at the wrist. rPWV is an index for arterial stiffness. Imagine the water wave velocity in water pipe: water pipe is equal to artery; water wave is equal to pulse wave. The stiffer the artery is, the higher the rPWV will be. Several factors will cause arterial stiffness,e.g. intima-media thickness, arterial calcification, vascular plaque formation.</string>
+    <string name="bp_status">The BP status of measurement results as following:</string>
+    <string name="bp0">0: Normal(Normal measurement of all parameters can be used to explain)</string>
+    <string name="bp1">1: Warning(this record may have unstable measurement)</string>
+    <string name="bp2">2: Irregular Heart Beat(Icon showing three hearts on Freescan)</string>
+    <string name="aboutbp">Blood Pressure is the strength of your blood pushing against the side of your blood vessels. When your heart beats,it pumps blood round your body to give it the energy and oxygen it needs.As the blood moves , it pushes against the sides of the blood vessels. Blood pressure is measured in millimeters of mercury(mmHg) and is given as two figures:</string>
+    <string name="aboutbpinfo">Systolic Pressure - the pressure when your heart pushes blood out</string>
+    <string name="aboutbpinfo1">Diastolic Pressure - the pressure when your heart rests between beats</string>
+    <string name="Data">Data</string>
+    <string name="quantity">Quantity</string>
+    <string name="health">Health Profile</string>
+    <string name="nutrition">Track Diet &amp; Excercise</string>
+    <string name="signin">Sign In</string>
+    <string name="ft">ft/inch</string>
+    <string name="cm">cm</string>
+    <string name="startage">START AGE</string>
+    <string name="endage">END AGE</string>
+    <string name="entermanual">Write Diseases Manually</string>
+    <string name="entermanualallergy">Write Allergy Manually</string>
+    <string name="ok">OK</string>
+    <string name="title_activity_pedometer">PedometerActivity</string>
+    <string name="pedometer">Pedometer</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_Endtime">End Time</string>
+    <string name="starttime">Start Time</string>
+    <string name="AddSteps">Add Steps</string>
+    <string name="Module">Module is under development</string>
+    <string name="underdevelop">Under Development</string>
+    <string name="bmi_txt">BMI</string>
+    <string name="bloodgroup">BLOOD GROUP</string>
+    <string name="done">Done</string>
+    <string name="step1">STEP 1</string>
+    <string name="step1_info">Press the power button in the middle of the device to rurn on the device.</string>
+    <string name="step2">STEP 2</string>
+    <string name="step2_info">Feel the pulse on your LEFT wrist in the same way your doctor measures your pulse.</string>
+    <string name="step3">STEP 3</string>
+    <string name="step3_info">Hold Freescan on the pulse with your right hand and press continuously on the Start button with your index finger</string>
+    <string name="step4_info">After 10 seconds of measuring the result appears on the display.</string>
+    <string name="step4">STEP 4</string>
+    <string name="note_info">NOTE : Once You\'re Done With Measurement Then Tap On Done Button</string>
+    <string name="information">Information</string>
+    <string name="foodname_hint">Food Name</string>
+
+    <!-- Font -->
+    <string name="roboto_light">sans-serif-light</string>
+
+    <string name="dob">DOB</string>
+    <string name="kg">Kg</string>
+    <string name="bp">BP</string>
+    <string name="BP">BP</string>
+    <string name="register">Register</string>
+    <string name="uploadimage">Upload Image</string>
+    <string name="select_Endtime_info">Select Time</string>
+    <string name="search_food">Search Food</string>
+    <string name="uploadpdf">Upload Pdf</string>
+    <string name="veg_info">1 = 1 cup of vegetable</string>
+    <string name="time_day">Times a day</string>
+    <string name="Clicktoselect">Tap here to Select DOB</string>
+    <string name="enterheight">Enter Height(cm)</string>
+    <string name="calintake">CAL INTAKE</string>
+    <string name="remainingcal">CAL REMAINING</string>
+    <string name="notloggedfood">No foods logged yet</string>
+    <string name="excercise">Excercise</string>
+    <string name="nutritioninfo">Nutrition</string>
+    <string name="calburned">CAL BURNED</string>
+    <string name="article">Article Name</string>
+    <string name="article_data">Articles</string>
+    <string name="dailycalorie">Daily Calorie Limit :</string>
+    <string name="searchbox_info">Use the search box above to search for foods to add to your log</string>
+    <string name="commonfoods">Common foods</string>
+    <string name="article_title">Articles</string>
+    <string name="typeexcercise">Type an excercise \n 45 min spinning class \n Walked 30 min \n ran 3 mile</string>
+    <string name="logexcercise">Log Excercises</string>
+    <string name="pedometer_title">PEDOMETER</string>
+    <string name="nutrition_title">NUTRITION</string>
+    <string name="devicedata_his">DEVICE HISTORY</string>
+    <string name="arrhythmia_title">ARRHYTHMIA</string>
+    <string name="ocr">UPLOAD LAB REPORT</string>
+    <string name="calories_title">CALORIES</string>
+    <string name="pulse_title">PULSE</string>
+    <string name="editProfile">Edit Profile</string>
+    <string name="history">Body Vitals History</string>
+    <string name="connectdevice">Connect Device</string>
+    <string name="logout">Logout</string>
+    <string name="selectevent">Select Event</string>
+    <string name="update">Update</string>
+    <string name="viewall">View All</string>
+    <string name="nf_sugars">Sugar</string>
+    <string name="glucosef">SUGAR FASTING</string>
+    <string name="glucosepp">SUGAR NON-FASTING</string>
+    <string name="triglyceride">TRIGLYCERIDES</string>
+    <string name="hdlcholestrol">HDL_CHOLESTEROL</string>
+    <string name="ldlcholestrol">LDL_CHOLESTEROL</string>
+    <string name="uploadyourprescription_report">Upload Medical Report</string>
+    <string name="nf_potassium">Potassium</string>
+    <string name="tagline">Our wellness experts driving wellness with the power of Ayurveda .</string>
+    <string name="howtouse">How to Use</string>
+    <string name="homepage">Home</string>
+    <string name="servererror">Sorry! Server is Not Responding</string>
+    <string name="newpass">New Password</string>
+    <string name="fogotpasss">Forget password</string>
+    <string name="proceed">Proceed</string>
+    <string name="otphint">For your security, a one time password has been sent to your Mobile Number and Email Id. Please enter it below to continue.</string>
+    <string name="newpasshint">Please enter a new password and  confirm the password</string>
+    <string name="confpassword">Confirm Password</string>
+    <string name="reports">Reports</string>
+    <string name="healthreport">Health Report</string>
+    <string name="preexisthint">Pre-Existing Disease</string>
+    <string name="allergy">Allergy Detail</string>
+
+
+    <string name="default_notification_channel_id">Cover2Protect</string>
+    <string name="rationale_doc_picker">We need this pemission to read documents from device</string>
+    <string name="targetacheived">Daily Target Acheived</string>
+    <string name="entertarget">Enter Target</string>
+    <string name="history_pedo">History</string>
+    <string name="readingstatus"><![CDATA[Reading Status ->]]></string>
+    <string name="internet">Check Your Internet Connection</string>
+    <string name="arrythmiawarning">The number of arrythmia events in the last 30 days is</string>
+    <string name="warningafib">The incidence times of AFib in the last 30 days is</string>
+    <string name="agehint">Age:</string>
+    <string name="getprotection">Get PROTECTION</string>
+    <string name="price">₹1800 - ₹14,800</string>
+    <string name="device">Devices</string>
+    <string name="health_hint">Health</string>
+    <string name="scanfordevices">Scan for device</string>
+    <string name="requirement_device_binding">Requirement for device binding</string>
+    <string name="requirement_1">The device should be powered on</string>
+    <string name="requirement_2">Bluetooth should be enabled</string>
+    <string name="requirement_3">The distance between device and mobile should be within 10 mtrs</string>
+    <string name="devicescan">Scan Device</string>
+    <string name="nottakingmed">Not taking medicine and HbA1C above 7</string>
+    <string name="normalsugar">Taking Medicine with Normal Sugar Levels</string>
+    <string name="highsugar">Taking Medicine but Higher Sugar Levels</string>
+    <string name="withoutmed">Controlling HbA1C below 7 without medicines</string>
+    <string name="otpresent">OTP resent successfully</string>
+    <string name="mobilerequired">Mobile Number is required</string>
+    <string name="smsretriver">Cannot Start SMS Retriever</string>
+    <string name="fieldvalidation">Field\'s can\'t be Empty</string>
+    <string name="gatt">Gatt</string>
+    <string name="socket">Socket</string>
+    <string name="locationPermission">Please go to settings to grant location permission manually</string>
+    <string name="unbindevice">Unbind device</string>
+    <string name="devicesearch">Device Search</string>
+    <string name="autoheartrate">Automatic heart rate test</string>
+    <string name="turnbloodpressure">Turn on blood pressure</string>
+    <string name="turnbloodpressureoff">Turn off blood pressure</string>
+    <string name="nav_header_desc">Header</string>
+    <string name="enable">Enable</string>
+    <string name="heartratetest">Heart Rate Test</string>
+    <string name="autohearat">Heart Rate Test</string>
+    <string name="start_hint">Start</string>
+    <string name="minheartrate">Min. heart rate</string>
+    <string name="avgheartrate">Avg. heart rate</string>
+    <string name="maxheartrate">Max.heart rate</string>
+    <string name="bloodpressure">Blood Pressure</string>
+    <string name="bloodoxygen">Blood Oxygen</string>
+    <string name="degreefatigue">Degree of fatigue</string>
+
+    <string name="device_name">Device Name</string>
+    <string name="status">Status</string>
+    <string name="read_data">Read data</string>
+    <string name="clear_data">Clear data</string>
+    <string name="time_sync">sync</string>
+    <string name="disconnect">Dissconnect</string>
+    <string name="connect">Connect</string>
+    <string name="start_scan">Start Scan</string>
+    <string name="stop_scan">Stop scan</string>
+
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
+    <string name="message_empty_layout_changes">Add an barcode above to get started.</string>
+    <string name="message_empty_unconnect">Click on the Connect button to get started.</string>
+
+    <string name="action_add_item">Add Product Barcode</string>
+    <string name="action_search_progress_item">Search Progress</string>
+    <string name="action_search_item">Search Bluetooth Device</string>
+    <string name="action_remove_item">Remove item</string>
+    <string name="preferenceScreen_title">Set scanning conditions</string>
+    <string name="listPreference_title">Broadcast Type</string>
+    <string name="listPreference_dialogTitle">Choose Broadcast Type</string>
+    <string name="multiSelectListPreference_title">Device Type</string>
+    <string name="multiSelectListPreference_dialogTitle">Choose Device Type</string>
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Device User</item>
+        <item>Scan Filter</item>
+        <item>Alarm Clock</item>
+        <item>Scan Barcode</item>
+        <item>Search Device</item>
+        <item>Measured Device</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_user_info</item>
+        <item>@drawable/ic_scan_filter</item>
+        <item>@drawable/ic_alarm_clock</item>
+        <item>@drawable/qrcode_scan_line</item>
+        <item>@drawable/bluetooth</item>
+        <item>@drawable/ic_device_list</item>
+    </array>
+
+    <string name="scanner_title">Select device:</string>
+    <string name="scanner_empty">No device found</string>
+    <string name="scanner_action_scan">Scan</string>
+    <string name="scanner_action_cancel">Stop Search</string>
+    <string name="not_available">n/a</string>
+    <string name="not_available_value">" - "</string>
+    <string name="scanner_subtitle_bonded">Pairing Mode:</string>
+    <string name="scanner_subtitle__not_bonded">Normal Mode:</string>
+    <string name="ptr_pull_to_refresh">Pull to refresh</string>
+    <string name="ptr_release_to_refresh">Release to refresh</string>
+    <string name="ptr_refreshing">Refreshing…</string>
+    <string name="ptr_last_updated">Updated: %1$s</string>
+
+    <string name="action_connect">Connect</string>
+    <string name="action_clear_item">Clear</string>
+    <string name="switch_text_start">start</string>
+    <string name="switch_text_stop">stop</string>
+    <string name="action_save_alarm_clock_item">Save Alarm Clock</string>
+    <string name="action_save_user_info_item">Save User Info</string>
+    <string name="action_add_device_item">Add Device</string>
+    <string name="message_no_measured_device">There is no measuring device</string>
+    <string name="action_set_scan_filter_item">Set Scan Filter</string>
+    <string name="message_default_search">No scan filter,scan all device\'s all broadcast</string>
+
+    <!-- Dialog delete prompt message -->
+    <string name="message_delete_prompt">Do you really want to delete it?</string>
+    <string name="message_no_measured_data">There is no measurement data</string>
+
+    <string name="action_show_version_item">Current Version</string>
+    <string name="dash">-</string>
+    <string name="scan_in_progress">Scanning for device ... \n Make sure that your device is powered on.</string>
+    <string name="connecting_to_device">Please take reading from your Blood Pressure Device and wait...</string>
+    <string name="new_reading">Take new reading</string>
+    <string name="title_activity_questionnaire8">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+
+    <string-array name="questionnaire1">
+        <item>Reduce blood pressure levels</item>
+        <item>Cut down sugar</item>
+        <item>Swift</item>
+        <item>Reduce weight</item>
+        <item>Build muscle</item>
+        <item>Improve body flexibility</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar_normal"
+        android:id="@+id/tb"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tb"
+        android:layout_above="@id/ll_btm">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/image_prof"
+            android:scaleType="centerInside"
+            android:padding="10dp"
+            android:id="@+id/iv_avatar"
+            android:gravity="left"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:text="Carla Harrison"
+            android:textSize="30sp"
+            android:layout_gravity="center_vertical"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/txt_name"
+            android:gravity="left"/>
+    </LinearLayout>
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="1px"
+      android:background="@color/colorPrimaryDark"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/title_size"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:layout_margin="10dp"
+        android:textColor="@color/md_yellow_800"
+        android:text="This Month"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                android:text="1500"
+                android:textSize="28sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Points"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/holo_blue_bright"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="1px"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:paddingTop="35dp"
+            android:paddingBottom="35dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="28sp"
+                            android:drawableLeft="@drawable/ic_heart"
+                            android:drawableTint="@color/md_red_500"
+                            android:backgroundTintMode="src_atop"
+                            android:drawablePadding="5dp"
+                            android:text="10"/>
+                    </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active Days"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:textColor="@android:color/holo_blue_bright"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <com.majorik.sparklinelibrary.SparkLineLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/spark_line"
+        android:background="@android:color/transparent"
+        app:s_gradient_line="true"
+        app:s_line_color="#fed32c"
+        app:s_line_second_color="#FF5722"
+        app:s_line_thickness="8dp"
+        android:padding="15dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/title_size"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:layout_margin="10dp"
+        android:textColor="@color/md_yellow_800"
+        android:text="Distances"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:text="91k"
+                android:id="@+id/tv_today_steps"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Steps"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/holo_blue_bright"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="1px"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:paddingTop="35dp"
+            android:paddingBottom="35dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:text="5 mi"
+                android:id="@+id/tv_today_ran"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ran"
+                android:textColor="@android:color/holo_blue_bright"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="1px"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:paddingTop="35dp"
+            android:paddingBottom="35dp"/>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:text="5 mi"
+                android:id="@+id/tv_today_biked"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Biked"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/holo_blue_bright"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/title_size"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:layout_margin="10dp"
+        android:textColor="@color/md_yellow_800"
+        android:text="Durations"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:text="6 hr 23 min"
+                android:id="@+id/tv_overall_steps"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Walked"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/holo_blue_bright"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="1px"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:paddingTop="35dp"
+            android:paddingBottom="35dp"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:text="50 mi"
+                android:id="@+id/tv_overall_ran"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ran"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/holo_blue_bright"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="1px"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:paddingTop="35dp"
+            android:paddingBottom="35dp"/>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:text="45 mi"
+                android:id="@+id/tv_overall_biked"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Biked"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/holo_blue_bright"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:id="@+id/ll_btm"
+        android:background="@drawable/bg_gradient_white_transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_btn_curved">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Day"
+                android:id="@+id/btn_day"
+                android:background="@drawable/bg_btn_curved_selected"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Week"
+                android:id="@+id/btn_week"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Month"
+                android:id="@+id/btn_month"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
+

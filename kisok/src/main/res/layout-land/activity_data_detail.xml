@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="indg.com.cover2protect.viewmodel.devicedataviewmodel.DeviceViewModel" />
+
+        <variable
+            name="model"
+            type="indg.com.cover2protect.model.deviceresponse.Data" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".views.activity.maisense_device.DataDetail">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorAccent"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:titleTextAppearance="@style/Toolbar.TitleTextNew" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/hundred_dp"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:layout_marginRight="@dimen/margin_ten"
+                    android:weightSum="3">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/ripple_bp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            app:mrl_rippleAlpha="0.1"
+                            app:mrl_rippleColor="@color/fbutton_color_belize_hole"
+                            app:mrl_rippleDelayClick="true"
+                            app:mrl_rippleFadeDuration="10"
+                            app:mrl_rippleHover="true"
+                            app:mrl_rippleOverlay="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/margin_thirtytwo"
+                                        android:layout_height="@dimen/margin_thirtytwo"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/systolic" />
+
+
+                                    <TextView
+                                        android:id="@+id/bp_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/ssprolight"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/default_textColor"
+                                        android:textSize="@dimen/text_fourteen"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/bp_txt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/margin_five"
+                                        android:fontFamily="@font/ssprolight"
+                                        android:text="@string/systolic_dia"
+                                        android:textColor="@color/default_textColor"
+                                        android:textSize="@dimen/text_fourteen" />
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/ripple_pulse"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            app:mrl_rippleAlpha="0.1"
+                            app:mrl_rippleColor="@color/fbutton_color_belize_hole"
+                            app:mrl_rippleDelayClick="true"
+                            app:mrl_rippleFadeDuration="10"
+                            app:mrl_rippleHover="true"
+                            app:mrl_rippleOverlay="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/margin_thirtytwo"
+                                        android:layout_height="@dimen/margin_thirtytwo"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_image5" />
+
+                                    <TextView
+                                        android:id="@+id/hr_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/ssprolight"
+                                        android:text="@{model.hr}"
+                                        android:textColor="@color/default_textColor"
+                                        android:textSize="@dimen/text_fourteen"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/hr_txt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/margin_five"
+                                        android:fontFamily="@font/ssprolight"
+                                        android:text="@string/pulse"
+                                        android:textColor="@color/default_textColor"
+                                        android:textSize="@dimen/text_fourteen"
+
+                                        />
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/ripple_rpwv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            app:mrl_rippleAlpha="0.1"
+                            app:mrl_rippleColor="@color/fbutton_color_belize_hole"
+                            app:mrl_rippleDelayClick="true"
+                            app:mrl_rippleFadeDuration="10"
+                            app:mrl_rippleHover="true"
+                            app:mrl_rippleOverlay="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/margin_thirtytwo"
+                                        android:layout_height="@dimen/margin_thirtytwo"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_image2"
+                                        android:tint="@color/colorAccent" />
+
+
+                                    <TextView
+                                        android:id="@+id/rpwv_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:text="@{model.pwv}"
+                                        android:textColor="@color/default_textColor"
+                                        android:textSize="@dimen/text_fourteen"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/rpwv_txt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/margin_five"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:text="@string/rpwv"
+                                        android:textColor="@color/gray"
+                                        android:textSize="@dimen/text_fourteen"
+
+                                        />
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/hundred_dp"
+                    android:layout_marginRight="@dimen/margin_ten"
+                    android:weightSum="3">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/ripple_afib"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            app:mrl_rippleAlpha="0.1"
+                            app:mrl_rippleColor="@color/fbutton_color_belize_hole"
+                            app:mrl_rippleDelayClick="true"
+                            app:mrl_rippleFadeDuration="10"
+                            app:mrl_rippleHover="true"
+                            app:mrl_rippleOverlay="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/margin_thirtytwo"
+                                        android:layout_height="@dimen/margin_thirtytwo"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_image1" />
+
+
+                                    <TextView
+                                        android:id="@+id/afib_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:text="@{model.afib}"
+                                        android:textColor="@color/default_textColor"
+                                        android:textSize="@dimen/text_sixteen"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/afib_txt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/margin_five"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:text="@string/afib_label"
+                                        android:textColor="@color/default_textColor"
+                                        android:textSize="@dimen/text_fourteen" />
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/ripple_arrythmia"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            app:mrl_rippleAlpha="0.1"
+                            app:mrl_rippleColor="@color/fbutton_color_belize_hole"
+                            app:mrl_rippleDelayClick="true"
+                            app:mrl_rippleFadeDuration="10"
+                            app:mrl_rippleHover="true"
+                            app:mrl_rippleOverlay="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/margin_thirtytwo"
+                                        android:layout_height="@dimen/margin_thirtytwo"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_image7" />
+
+
+                                    <TextView
+                                        android:id="@+id/arrythmia_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:text="@{model.arrhythmia}"
+                                        android:textColor="@color/default_textColor"
+                                        android:textSize="@dimen/text_fourteen"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/arrythmia_txt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/margin_five"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:text="@string/arrhythmia_label"
+                                        android:textColor="@color/default_textColor"
+                                        android:textSize="@dimen/text_fourteen" />
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin_thirtytwo"
+                                android:layout_height="@dimen/margin_thirtytwo"
+                                android:layout_gravity="center"
+                                android:src="@drawable/hrv" />
+
+
+                            <TextView
+                                android:id="@+id/hrvLevel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/ssprolight"
+                                android:text="@{model.hrv_level}"
+                                android:textColor="@color/default_textColor"
+                                android:textSize="@dimen/text_fourteen"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/hrvLevel_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_five"
+                                android:fontFamily="@font/ssproregular"
+                                android:text="@string/hrv_label"
+                                android:textColor="@color/default_textColor"
+                                android:textSize="@dimen/text_fourteen" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/text_twentyfive"
+                        android:layout_marginLeft="@dimen/margin_twentyfive"
+                        android:fontFamily="@font/ssproregular"
+                        android:text="@string/selectevent"
+                        android:textSize="@dimen/text_sixteen" />
+
+                    <Spinner
+                        android:id="@+id/event_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_twentyfive"
+                        android:layout_marginTop="@dimen/margin_twenty"></Spinner>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/margin_twenty"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/text_sixteen"
+                        android:textStyle="bold"
+                        android:text="@string/readingstatus"
+                        android:fontFamily="@font/ssprolight"
+                        android:textColor="@color/defaultTextColor"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/status"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/text_sixteen"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="@dimen/margin_five"
+                        android:fontFamily="@font/ssprolight"
+                        android:textColor="@color/defaultTextColor"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_twenty"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_twenty">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PWG"
+                                android:textColor="@color/default_textColor"
+                                android:textSize="@dimen/text_eighteen" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/pulseimageview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_twenty"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_twenty">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/ecg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ECG"
+                                android:textColor="@color/default_textColor"
+                                android:textSize="@dimen/text_eighteen" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/ecgimageview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</layout>

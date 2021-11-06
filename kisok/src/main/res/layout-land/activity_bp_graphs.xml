@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <include
+        layout="@layout/toolbar_normal"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/colorPrimaryBG">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <!-- <com.app.adprogressbarlib.AdCircleProgress
+                 android:id="@+id/pgb_progress4"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 app:adpgb_background_color="@android:color/transparent"
+                 android:backgroundTintMode="add"
+                 app:adpgb_finished_color="@android:color/white"
+                 app:adpgb_unfinished_color="@android:color/holo_red_light"
+                 custom:adpgb_finished_stroke_width="5dp"
+                 app:adpgb_text_size="12dp"
+                 custom:adpgb_show_text="true"
+                 app:adpgb_text_color="@android:color/holo_red_light"
+                 custom:adpgb_unfinished_stroke_width="5dp" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_margin="20dp"
+                    android:padding="2dp"
+                    android:background="@drawable/circle_shape">
+                    <TextView
+                        android:id="@+id/tv_heart_beat"
+                        android:text="00"
+                        android:textSize="50dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:drawableTop="@drawable/heartcount"
+                        android:drawableTint="@color/md_red_500"
+                        android:backgroundTintMode="src_atop"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textStyle="italic"
+                        android:text="Heart Rate"
+                        android:textColor="@color/md_red_300"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_curved_primary"
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvBPlabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:text="Blood Pressure"
+                            android:textStyle="normal"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/tvBPvalue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:text="000/00"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_curved_primary"
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvBPlabel1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:text="Pulse"
+                            android:gravity="center"
+                            android:textStyle="normal"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/tvPulse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="00 BMP"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"></TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="4dp"
+        android:background="@color/colorPrimaryBG">
+
+
+        <Button
+            android:id="@+id/btn_take_new_reading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_btn_curved"
+            android:drawableLeft="@drawable/ic_refresh"
+            android:drawableTint="@color/white"
+            android:padding="7dp"
+            android:text="Take new reading"
+            android:textColor="@color/white" />
+
+
+        <com.majorik.sparklinelibrary.SparkLineLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/spark_line_pressure_graph"
+            android:background="@color/colorPrimaryBG"
+            app:s_gradient_line="false"
+            app:s_line_color="@color/white"
+            app:s_line_second_color="@color/md_red_500"
+            app:s_line_thickness="1sp"
+            android:padding="15dp"
+            android:layout_margin="10dp"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/curved_bg_border"
+        android:layout_weight="2.5"
+        android:padding="2dp"
+        android:layout_margin="2dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Historic Readings"
+            android:textSize="22dp"
+            android:gravity="center"
+            android:background="@drawable/curved_bg_list"
+            android:textColor="@color/colorPrimaryCardBg2"/>
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:id="@+id/swipe_refresh_bp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recyclerview_bp"/>
+
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+

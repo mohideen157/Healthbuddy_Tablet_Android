@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".views.fragments.scan_device.ScanDeviceFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_threehundread"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="-15dp"
+            android:layout_marginRight="-10dp"
+            android:background="@drawable/rect_blue">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/anim"
+                android:layout_width="@dimen/margin_twohundread"
+                android:layout_height="@dimen/margin_twohundread"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_two"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="bluetooth.json"
+                app:lottie_loop="true" />
+
+            <indg.com.cover2protect.util.ripple.FButton
+                android:id="@+id/scan"
+                android:layout_width="@dimen/margin_hundreadfifty"
+                android:layout_height="@dimen/margin_fourty"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_five"
+                android:background="@drawable/rectangle"
+                android:fontFamily="@font/robotoregular"
+                android:text="@string/scanfordevices"
+                android:textAllCaps="false"
+                app:buttonColor="@color/white"
+                app:cornerRadius="@dimen/margin_twenty"
+                app:shadowEnabled="false" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/device_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/device_rv"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/info_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/margin_ten"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:fontFamily="@font/ssprolight"
+                    android:text="@string/requirement_device_binding"
+                    android:textColor="@color/default_textColor"
+                    android:textSize="@dimen/text_sixteen"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/margin_ten"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:drawableLeft="@drawable/ic_fiber_manual_record_black_24dp"
+                    android:drawableTint="@color/default_textColor"
+                    android:fontFamily="@font/ssprolight"
+                    android:text="@string/requirement_1"
+                    android:textColor="@color/default_textColor"
+                    android:textSize="@dimen/text_sixteen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/margin_ten"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:drawableLeft="@drawable/ic_fiber_manual_record_black_24dp"
+                    android:drawableTint="@color/default_textColor"
+                    android:fontFamily="@font/ssprolight"
+                    android:text="@string/requirement_2"
+                    android:textColor="@color/default_textColor"
+                    android:textSize="@dimen/text_sixteen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/margin_ten"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:layout_marginEnd="@dimen/margin_ten"
+                    android:drawableLeft="@drawable/ic_fiber_manual_record_black_24dp"
+                    android:drawableTint="@color/default_textColor"
+                    android:fontFamily="@font/ssprolight"
+                    android:text="@string/requirement_3"
+                    android:textColor="@color/default_textColor"
+                    android:textSize="@dimen/text_sixteen" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

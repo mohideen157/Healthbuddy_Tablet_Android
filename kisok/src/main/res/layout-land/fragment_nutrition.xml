@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".views.fragments.nutrition.NutritionFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_fiftysix">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:layout_marginRight="@dimen/margin_twenty"
+                android:weightSum="12">
+
+                <LinearLayout
+                    android:id="@+id/breakfast_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/breakfast_img"
+                        android:layout_width="@dimen/margin_sixty"
+                        android:layout_height="@dimen/margin_sixty"
+                        android:layout_gravity="center"
+                        android:src="@drawable/breakfast_ic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_five"
+                        android:fontFamily="@font/ralewaybold"
+                        android:text="@string/breakfast"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lunch_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/lunch_img"
+                        android:layout_width="@dimen/margin_sixty"
+                        android:layout_height="@dimen/margin_sixty"
+                        android:layout_gravity="center"
+                        android:src="@drawable/lunch_ic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_five"
+                        android:fontFamily="@font/ralewaybold"
+                        android:text="@string/lunch"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dinner_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/dinner_img"
+                        android:layout_width="@dimen/margin_sixty"
+                        android:layout_height="@dimen/margin_sixty"
+                        android:layout_gravity="center"
+                        android:src="@drawable/dinner_ic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_five"
+                        android:fontFamily="@font/ralewaybold"
+                        android:text="@string/dinner"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/snack_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/snack_img"
+                        android:layout_width="@dimen/margin_sixty"
+                        android:layout_height="@dimen/margin_sixty"
+                        android:layout_gravity="center"
+                        android:src="@drawable/snack_ic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_five"
+                        android:fontFamily="@font/ralewaybold"
+                        android:text="@string/snack"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:layout_marginTop="@dimen/margin_seventy"
+                android:layout_marginRight="@dimen/margin_twenty">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/date_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_twenty"
+                            android:fontFamily="@font/ssprobold"
+                            android:text="@string/date"
+                            android:textColor="@color/default_textColor"
+                            android:textSize="@dimen/text_eighteen" />
+
+                        <TextView
+                            android:id="@+id/date_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_twenty"
+                            android:layout_marginTop="@dimen/margin_ten"
+                            android:fontFamily="@font/ssprolight"
+                            android:text="@string/select_date"
+                            android:textSize="@dimen/text_eighteen" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/time_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_twenty"
+                            android:fontFamily="@font/ssprobold"
+                            android:text="@string/time"
+                            android:textColor="@color/default_textColor"
+                            android:textSize="@dimen/text_eighteen" />
+
+                        <TextView
+                            android:id="@+id/time_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_twenty"
+                            android:layout_marginTop="@dimen/margin_ten"
+                            android:fontFamily="@font/ssprolight"
+                            android:text="@string/select_Endtime_info"
+                            android:textSize="@dimen/text_eighteen" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/food_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sixty"
+                    android:layout_marginLeft="@dimen/margin_twenty"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:layout_marginRight="@dimen/margin_twenty"
+                    android:layout_marginBottom="@dimen/margin_five"
+                    app:cardElevation="@dimen/margin_ten">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_ten"
+                        android:background="@null"
+                        android:drawableLeft="@drawable/ic_search_black_24dp"
+                        android:drawableTint="@color/default_textColor"
+                        android:fontFamily="@font/ralewayregular"
+                        android:hint="@string/search_food"
+                        android:maxLines="3"
+                        android:singleLine="false"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_fourteen" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <indg.com.cover2protect.util.ripple.FButton
+        android:id="@+id/my_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="@dimen/margin_ten"
+        android:stateListAnimator="@null"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        app:buttonColor="@color/colorAccent"
+        app:shadowEnabled="false" />
+</RelativeLayout>

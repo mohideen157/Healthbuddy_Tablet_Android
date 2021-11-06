@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".questionnaire_thankyoupage">
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/logo_c2p">
+
+    </ImageView>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_vp_adp_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="Thank you for your updates"
+            android:textSize="36sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tv_vp_adp_question2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="Your wellness score will be updated accordingly"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary">
+
+        </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="100dp"
+                android:background="@color/white"
+                android:text="TAKE ME TO THE DASHBOARD"
+                android:textColor="@color/md_blue_500"
+                android:textSize="24dp"
+                android:layout_gravity="center" >
+
+            </Button>
+
+
+        </LinearLayout>
+
+</LinearLayout>
+
+</LinearLayout>

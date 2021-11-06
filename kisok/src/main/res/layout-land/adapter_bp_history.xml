@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:padding="4dp"
+    android:elevation="2dp"
+    android:background="@drawable/curved_bg_list">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_ap_bp_history_date"
+            android:text="00-00-00"
+            android:textColor="@color/md_black_1000"
+            android:padding="5dp"
+            android:textAppearance="@android:style/TextAppearance.Small"/>
+
+        <FrameLayout
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@color/md_black_1000"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_ap_bp_history_bpm_average"
+            android:text="Pulse"
+            android:textColor="@color/md_black_1000"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Small"/>
+
+        <FrameLayout
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@color/md_black_1000"/>
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_ap_bp_history_low_high"
+                android:text="00/00"
+                android:textAlignment="center"
+                android:textColor="@color/md_black_1000"
+                android:padding="5dp"
+                android:textAppearance="@android:style/TextAppearance.Small"/>
+
+            <!-- <TextView
+                 android:layout_weight="1"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/tv_ap_bp_history_bp_status"
+                 android:text="00/00"
+                 android:textAlignment="center"
+                 android:textColor="@color/md_black_1000"
+                 android:padding="5dp"
+                 android:textAppearance="@android:style/TextAppearance.Small"/>-->
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

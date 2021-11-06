@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".views.fragments.History.ExcerciseFragment.ExcerciseFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.app.progresviews.ProgressWheel
+                android:id="@+id/heartrate"
+                android:layout_width="@dimen/margin_twohundread_fourty"
+                android:layout_height="@dimen/margin_twohundread_fourty"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_seventy"
+                app:barWidth="17dp"
+                app:countText="0"
+                app:percentage="0"
+                app:countTextColor="@android:color/black"
+                app:countTextSize="20sp"
+                app:defTextColor="@android:color/black"
+                app:defTextSize="10sp"
+                app:rimColor="@color/greylight"
+                app:definitionText="Blood Pressure"
+                app:marginBtwText="15dp"
+                app:progressColor="@color/fbutton_color_orange" />
+
+            <indg.com.cover2protect.util.ripple.FButton
+                android:id="@+id/start_btn"
+                android:layout_width="@dimen/hundredfifty"
+                android:layout_height="@dimen/margin_fourty"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:fontFamily="@font/sourcesansproregular"
+                android:text="@string/start_hint"
+                app:shadowEnabled="false"
+                app:buttonColor="@color/greylight"
+                android:textColor="@color/defaultTextColor" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_fourty"
+                android:background="@color/greylight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hundredfifty"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/margin_fourty"
+                        android:layout_height="@dimen/margin_fourty"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_twenty"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/greylight">
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_twentyfive"
+                            android:layout_height="@dimen/margin_twentyfive"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/bpos"
+                            android:tint="@color/fbutton_color_asbestos" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/bloodpressure" />
+
+                    <TextView
+                        android:id="@+id/bloodpressure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:text="@string/zero"
+                        android:textSize="@dimen/text_fourteen" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/greylight" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/margin_fourty"
+                        android:layout_height="@dimen/margin_fourty"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_twenty"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/greylight">
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_twentyfive"
+                            android:layout_height="@dimen/margin_twentyfive"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/bpos"
+                            android:tint="@color/fbutton_color_asbestos" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/bloodoxygen" />
+
+                    <TextView
+                        android:id="@+id/bloodoxygen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/zero"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/text_fourteen" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/greylight" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/margin_fourty"
+                        android:layout_height="@dimen/margin_fourty"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_twenty"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/greylight">
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_twentyfive"
+                            android:layout_height="@dimen/margin_twentyfive"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/bpos"
+                            android:tint="@color/fbutton_color_asbestos" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/degreefatigue" />
+
+                    <TextView
+                        android:id="@+id/degree"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/zero"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/text_fourteen" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/greylight" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+</layout>

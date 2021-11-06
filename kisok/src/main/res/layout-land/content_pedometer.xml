@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".views.activity.pedometer.PedometerActivity"
+    tools:showIn="@layout/activity_pedometer">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/ninty"
+        android:layout_height="match_parent">
+        <indg.com.cover2protect.util.ripple.FButton
+            android:id="@+id/history_btn"
+            android:layout_width="@dimen/hundredthirty_dp"
+            android:layout_height="@dimen/margin_fourty"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:layout_margin="@dimen/margin_twenty"
+            android:drawableRight="@drawable/ic_navigate_next_black_24dp"
+            android:drawableTint="@color/white"
+            android:fontFamily="@font/ssproregular"
+            android:text="@string/history_pedo"
+            android:textColor="@color/white"
+            app:buttonColor="@color/colorPrimary"
+            app:shadowEnabled="false" />
+
+
+
+
+
+
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/margin_threehundread">
+
+           <TextView
+               android:id="@+id/progress_value"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="@color/defaultTextColor"
+               android:layout_centerInParent="true"
+               android:textSize="@dimen/text_thirty"/>
+
+           <com.github.lzyzsd.circleprogress.ArcProgress
+               android:id="@+id/wheelprogress"
+               android:layout_gravity="center"
+               android:layout_width="@dimen/margin_twohundreadsixty"
+               android:layout_height="@dimen/margin_twohundreadsixty"
+               android:layout_centerInParent="true"
+               app:arc_text_color="@android:color/transparent"
+               app:arc_suffix_text_size="@dimen/text_sixteen"
+               app:arc_suffix_text_padding="@dimen/margin_ten"
+               app:arc_bottom_text="@string/targetacheived"
+               app:arc_stroke_width="@dimen/margin_ten"
+               app:arc_finished_color="@color/fbutton_color_belize_hole"
+               app:arc_unfinished_color="@color/greylight"
+               />
+
+       </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@+id/progress"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:layout_marginRight="@dimen/margin_ten"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.1"
+                android:src="@drawable/icfootstep" />
+
+            <com.app.progresviews.ProgressLine
+                android:id="@+id/step_line"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                app:definition="Daily steps"
+                app:lineBarWidth="7dp"
+                app:lineProgressColor="@color/fbutton_default_shadow_color"
+                app:underLineColor="@android:color/darker_gray"
+                app:value="0"
+                app:valueDefTextSize="20sp"
+                app:valuePercentage="49" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@+id/progress"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:layout_marginRight="@dimen/margin_ten"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.1"
+                android:src="@drawable/ic_fit_run" />
+
+            <com.app.progresviews.ProgressLine
+                android:id="@+id/calories_line"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                app:definition="Calories"
+                app:lineBarWidth="7dp"
+                app:lineProgressColor="@color/fbutton_color_orange"
+                app:underLineColor="@android:color/darker_gray"
+                app:value="0"
+                app:valueDefTextSize="20sp"
+                app:valuePercentage="45" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@+id/progress"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:layout_marginRight="@dimen/margin_ten"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.1"
+                android:src="@drawable/ic_fit_run" />
+
+            <com.app.progresviews.ProgressLine
+                android:id="@+id/target_pl"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                app:definition="Daily Step Target"
+                app:lineBarWidth="7dp"
+                app:lineProgressColor="@color/fbutton_color_orange"
+                app:underLineColor="@android:color/darker_gray"
+                app:value="8000"
+                app:valueDefTextSize="20sp"
+                app:valuePercentage="45" />
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>

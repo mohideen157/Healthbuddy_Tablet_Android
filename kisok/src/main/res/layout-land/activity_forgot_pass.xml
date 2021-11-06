@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="indg.com.cover2protect.viewmodel.forgotpasswordvm.ForgotPasswordViewModel" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradientbackground"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/darkblue"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:titleTextAppearance="@style/Toolbar.TitleTextNew" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-10dp"
+                            android:layout_marginTop="-15dp"
+                            android:layout_marginRight="-10dp"
+                            android:background="@drawable/rect_blue"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin_twohundread"
+                                android:layout_height="@dimen/margin_fifty"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_fifty"
+                                android:src="@drawable/logo3" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_fifteen"
+                                android:fontFamily="@font/ssproregular"
+                                android:paddingTop="@dimen/margin_twenty"
+                                android:text="@string/fogotpasss"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/text_eighteen" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin_twenty"
+                                android:layout_marginTop="@dimen/margin_fourty"
+                                android:background="@drawable/rectangle"
+                                android:elevation="@dimen/margin_ten"
+                                android:padding="@dimen/margin_twenty">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2.5">
+
+                                    <com.rilixtech.CountryCodePicker
+                                        android:id="@+id/ccp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_ten"
+                                        app:ccp_backgroundColor="@android:color/transparent"
+                                        app:ccp_defaultNameCode="in"
+                                        app:ccp_enablePhoneAutoFormatter="true"
+                                        app:ccp_setCountryByTimeZone="true"
+                                        app:ccp_showFlag="false"
+                                        app:ccp_showFullName="false"
+                                        app:ccp_textColor="@color/colorAccent"
+                                        app:ccp_textSize="@dimen/text_fourteen" />
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="8">
+
+                                    <EditText
+                                        android:id="@+id/username"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="@dimen/margin_ten"
+                                        android:background="@null"
+                                        android:drawablePadding="@dimen/margin_five"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:hint="@string/mobile"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="number"
+                                        android:maxLines="1"
+                                        android:textColor="@android:color/black"
+                                        android:textColorHint="@color/lightgrey"
+                                        android:textSize="@dimen/text_fourteen" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+
+                        <indg.com.cover2protect.util.ripple.FButton
+                            android:id="@+id/submit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/margin_twentyfive"
+                            android:layout_marginTop="@dimen/margin_twenty"
+                            android:layout_marginRight="@dimen/margin_twentyfive"
+                            android:layout_marginBottom="@dimen/margin_seventy"
+                            android:fontFamily="@font/ssproregular"
+                            android:text="@string/proceed"
+                            android:textColor="@color/white"
+                            app:buttonColor="@color/darkblue"
+                            app:shadowEnabled="false" />
+
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

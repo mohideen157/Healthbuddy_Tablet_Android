@@ -1,0 +1,36 @@
+package indg.com.cover2protect.model.nutrition.nutritiongetresponse
+
+
+data class Food  (
+    val alt_measures: List<AltMeasure>,
+    val brand_name: Any,
+    val consumed_at: String,
+    val food_name: String,
+    val full_nutrients: List<FullNutrient>,
+    val meal_type: String,
+    val metadata: Metadata,
+    val ndb_no: String,
+    val nf_calories: String,
+    val nf_cholesterol: String,
+    val nf_dietary_fiber: String,
+    val nf_p: String,
+    val nf_potassium: String,
+    val nf_protein: String,
+    val nf_saturated_fat: String,
+    val nf_sodium: String,
+    val nf_sugars: String,
+    val nf_total_carbohydrate: String,
+    val nf_total_fat: String,
+    val nix_brand_id: Any,
+    val nix_brand_name: Any,
+    val nix_item_id: Any,
+    val nix_item_name: Any,
+    val photo: Photo,
+    val serving_qty: String,
+    val serving_unit: String,
+    val serving_weight_grams: String,
+    val source: String,
+    val sub_recipe: Any,
+    val tags: Tags,
+    val upc: Any
+)

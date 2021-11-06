@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greylight"
+    android:orientation="vertical"
+    tools:context=".views.activity.device2.HeartRateTest.HeartRateTest">
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        layout="@layout/toolbar_heartratetest"/>
+</com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_eighty"
+        android:background="@color/white"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/margin_twenty"
+                android:fontFamily="@font/sourcesansproregular"
+                android:text="@string/enable"
+                android:textSize="@dimen/text_sixteen" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+
+            <indg.com.cover2protect.util.switchbutton.SwitchButton
+                android:id="@+id/switchButton"
+                android:layout_width="@dimen/margin_seventy"
+                android:layout_height="@dimen/margin_thirtytwo"
+                android:layout_centerInParent="true" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_eighty"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/margin_ten"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/starttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/margin_twenty"
+                android:fontFamily="@font/sourcesansproregular"
+                android:text="@string/starttime"
+                android:textSize="@dimen/text_sixteen" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/start_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+
+           <TextView
+               android:id="@+id/start_time"
+               android:layout_width="wrap_content"
+               android:layout_centerInParent="true"
+               android:text="00:00"
+               android:fontFamily="@font/sourcesansproregular"
+               android:textSize="@dimen/text_sixteen"
+               android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_eighty"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/margin_ten"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/endtime_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/margin_twenty"
+                android:fontFamily="@font/sourcesansproregular"
+                android:text="@string/select_Endtime"
+                android:textSize="@dimen/text_sixteen" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/endtime_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:id="@+id/end_time"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="00:00"
+                android:fontFamily="@font/sourcesansproregular"
+                android:textSize="@dimen/text_sixteen"
+                android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

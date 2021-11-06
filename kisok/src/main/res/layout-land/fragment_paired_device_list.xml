@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:paddingBottom="5dp"
+        >
+
+        <TextView
+            android:id="@+id/app_version_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="App Version:"
+            android:visibility="gone"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/app_version_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="gone"
+        android:background="@color/underscore_view_background" >
+    </View>
+
+
+    <LinearLayout
+        android:id="@+id/llProgressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="visible"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:minLines="2"
+            android:text="@string/scan_in_progress"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pair BMI Machine"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:background="@drawable/bg_btn_curved"
+            android:id="@+id/btn_pair_device"/>
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:visibility="gone"
+    android:orientation="horizontal">
+
+
+
+    <Switch
+        android:id="@+id/auto_sync_data_switch"
+        android:layout_width="wrap_content"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"
+        android:text="Sync Data :"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ib_scan_new"
+        android:background="@android:color/transparent"
+        android:src="@drawable/add_icons"/>
+
+
+</LinearLayout>
+
+
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/underscore_view_background" >
+    </View>
+
+    <ListView
+        android:id="@+id/paired_device_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:background="@drawable/linear_layout_border_frame"
+        android:padding="10dp"
+        android:visibility="gone"
+        >
+    </ListView>
+
+    <TextView
+        android:id="@android:id/empty"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/curved_bg_border"
+        android:gravity="center"
+        android:text="@string/message_no_measured_device"
+        android:textColor="?android:textColorSecondary" />
+
+    <LinearLayout
+        android:id="@+id/show_device_details_info_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        android:background="@drawable/linear_layout_border_frame"
+        android:orientation="vertical" >
+
+
+        <TextView
+            android:id="@+id/show_info_text_view"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:scrollbars = "vertical"
+            android:fastScrollEnabled="true"
+            android:text="@string/message_no_measured_data"
+            android:textColor="?android:textColorSecondary" />
+
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#DADADC" >
+        </View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="2dp" >
+
+            <Button
+                android:id="@+id/device_info_button"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_selector"
+                android:drawableLeft="@android:drawable/ic_menu_info_details"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Details" />
+
+            <Button
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/button_selector"
+                android:drawableLeft="@android:drawable/ic_menu_rotate"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Back" />
+
+            <Button
+                android:id="@+id/meaured_data_button"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/back_button"
+                android:layout_toRightOf="@+id/device_info_button"
+                android:background="@drawable/button_selector"
+                android:drawableLeft="@android:drawable/ic_menu_gallery"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Data" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+            android:gravity="center"
+            android:background="@color/md_blue_grey_100"
+            android:text="Your Historic Readings"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/md_blue_grey_200">
+
+
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_ap_bp_history_dat"
+                android:text="Date"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/md_black_1000_50"
+                android:padding="5dp"
+                android:textAppearance="@android:style/TextAppearance.Small"/>
+
+            <FrameLayout
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:background="@color/md_black_1000"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_ap_bp_history_bpm_averag"
+                android:text="Pulse"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/md_black_1000_50"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textAppearance="@android:style/TextAppearance.Small"/>
+
+            <FrameLayout
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:background="@color/md_black_1000"/>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_ap_bp_history_low_hig"
+                    android:text="Sys/Dia"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/md_black_1000_50"
+                    android:padding="5dp"
+                    android:textAppearance="@android:style/TextAppearance.Small"/>
+
+                <!-- <TextView
+                     android:layout_weight="1"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/tv_ap_bp_history_bp_status"
+                     android:text="00/00"
+                     android:textAlignment="center"
+                     android:textColor="@color/md_black_1000"
+                     android:padding="5dp"
+                     android:textAppearance="@android:style/TextAppearance.Small"/>-->
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_bmi_history"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBG">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/toolbar_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/curved_bg_border">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_user_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Age"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/curved_bg_border">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_user_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Height Cm"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/curved_bg_border">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_user_target"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Target Weight Kg"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+           <RadioGroup
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center"
+               android:layout_marginTop="15dp"
+               android:layout_marginBottom="15dp"
+               android:id="@+id/rg_sex">
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Male"
+                   android:checked="true"
+                   android:id="@+id/rb_male"/>
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Female"
+                   android:id="@+id/rb_female"/>
+
+           </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_user_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_btn_curved"
+            android:text="Save"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

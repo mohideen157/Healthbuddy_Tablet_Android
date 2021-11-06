@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="indg.com.cover2protect.viewmodel.registerviewmodel.RegisterViewModel" />
+
+        <variable
+            name="presenter"
+            type="indg.com.cover2protect.presenter.RegisterPresenter" />
+
+        <variable
+            name="loginpresenter"
+            type="indg.com.cover2protect.presenter.Presenter" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradientbackground"
+        android:fitsSystemWindows="true"
+        tools:context=".views.activity.registration.RegisterActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/margin_fourty"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-10dp"
+                        android:layout_marginTop="-15dp"
+                        android:layout_marginRight="-10dp"
+                        android:background="@drawable/rect_blue"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_twohundread"
+                            android:layout_height="@dimen/margin_fifty"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/margin_twenty"
+                            android:src="@drawable/logo3" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/thirty"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/margin_twenty">
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/margin_fifty"
+                                    android:layout_marginLeft="@dimen/margin_twenty"
+                                    android:layout_marginTop="@dimen/margin_fourty"
+                                    android:layout_marginRight="@dimen/margin_twenty"
+                                    android:background="@color/white">
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="2.5">
+
+                                        <com.rilixtech.CountryCodePicker
+                                            android:id="@+id/ccp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="@dimen/margin_ten"
+                                            app:ccp_backgroundColor="@android:color/transparent"
+                                            app:ccp_defaultNameCode="in"
+                                            app:ccp_enablePhoneAutoFormatter="true"
+                                            app:ccp_setCountryByTimeZone="true"
+                                            app:ccp_showFlag="false"
+                                            app:ccp_showFullName="false"
+                                            app:ccp_textColor="@color/colorAccent"
+                                            app:ccp_textSize="@dimen/text_fourteen" />
+                                    </RelativeLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="8">
+
+                                        <EditText
+                                            android:id="@+id/et_mobile"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/margin_ten"
+                                            android:background="@null"
+                                            android:drawablePadding="@dimen/margin_five"
+                                            android:fontFamily="@font/ssproregular"
+                                            android:hint="@string/mobile"
+                                            android:imeOptions="actionNext"
+                                            android:inputType="number"
+                                            android:maxLines="1"
+                                            android:text="@={viewModel.mobile}"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:textColorHint="@color/lightgrey"
+                                            android:textSize="@dimen/text_fourteen" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginLeft="@dimen/margin_twenty"
+                                    android:layout_marginRight="@dimen/margin_twenty"
+                                    android:background="#EDEDED" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/margin_fifty"
+                                    android:layout_marginLeft="@dimen/margin_twenty"
+                                    android:layout_marginRight="@dimen/margin_twenty"
+                                    android:background="@color/white">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1.7">
+
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@null"
+                                            android:textColorHint="@color/gray"
+                                            app:hintEnabled="false"
+                                            app:passwordToggleContentDescription=""
+                                            app:passwordToggleEnabled="true"
+                                            app:passwordToggleTint="@color/default_textColor"
+
+                                            >
+
+                                            <EditText
+                                                android:id="@+id/et_password"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:background="@null"
+                                                android:fontFamily="@font/ssproregular"
+                                                android:hint="@string/password"
+                                                android:imeOptions="actionDone"
+                                                android:inputType="textPassword"
+                                                android:paddingLeft="@dimen/margin_ten"
+                                                android:text="@={viewModel.password}"
+                                                android:textColor="@color/default_textColor"
+                                                android:textColorHint="@color/gray"
+                                                android:textSize="@dimen/text_fourteen" />
+
+                                        </com.google.android.material.textfield.TextInputLayout>
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginLeft="@dimen/margin_twenty"
+                                    android:layout_marginRight="@dimen/margin_twenty"
+                                    android:background="#EDEDED" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/margin_fifty"
+                                    android:layout_marginLeft="@dimen/margin_twenty"
+                                    android:layout_marginRight="@dimen/margin_twenty"
+                                    android:background="@color/white">
+
+                                    <EditText
+                                        android:id="@+id/et_email"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="@dimen/margin_ten"
+                                        android:background="@null"
+                                        android:drawableStart="@drawable/ic_local_post_office_black_24dp"
+                                        android:drawablePadding="@dimen/margin_five"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:hint="@string/email"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textEmailAddress"
+                                        android:maxLines="1"
+                                        android:text="@={viewModel.email}"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textColorHint="@color/lightgrey"
+                                        android:textSize="@dimen/text_fourteen" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginLeft="@dimen/margin_twenty"
+                                    android:layout_marginRight="@dimen/margin_twenty"
+                                    android:background="#EDEDED" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/margin_fifty"
+                                    android:layout_marginLeft="@dimen/margin_twenty"
+                                    android:layout_marginRight="@dimen/margin_twenty"
+                                    android:background="@color/white">
+
+                                    <Spinner
+                                        android:id="@+id/spinner1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="@dimen/margin_five"
+                                        android:layout_marginRight="@dimen/margin_five"
+                                        android:prompt="@string/tenant" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginLeft="@dimen/margin_twenty"
+                                    android:layout_marginRight="@dimen/margin_twenty"
+                                    android:background="#EDEDED" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/margin_fifty"
+                                    android:layout_marginLeft="@dimen/margin_twenty"
+                                    android:layout_marginRight="@dimen/margin_twenty"
+                                    android:background="@color/white">
+
+                                    <Spinner
+                                        android:id="@+id/spinner2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="@dimen/margin_five"
+                                        android:layout_marginRight="@dimen/margin_five"
+                                        android:prompt="@string/tenant" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginLeft="@dimen/margin_twenty"
+                                    android:layout_marginRight="@dimen/margin_twenty"
+                                    android:background="#EDEDED" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/margin_fifty"
+                                    android:layout_marginLeft="@dimen/margin_twenty"
+                                    android:layout_marginRight="@dimen/margin_twenty"
+                                    android:background="@color/white">
+
+                                    <EditText
+                                        android:id="@+id/et_username"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="@dimen/margin_ten"
+                                        android:background="@null"
+                                        android:drawableStart="@drawable/ic_person_outline_black_24dp"
+                                        android:drawablePadding="@dimen/margin_five"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:hint="@string/name"
+                                        android:imeOptions="actionGo"
+                                        android:inputType="textCapWords"
+                                        android:maxLines="1"
+                                        android:text="@={viewModel.username}"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textColorHint="@color/lightgrey"
+                                        android:textSize="@dimen/text_fourteen" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+                    <indg.com.cover2protect.util.ripple.FButton
+                        android:id="@+id/register"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_twentyfive"
+                        android:layout_marginLeft="@dimen/margin_twentyfive"
+                        android:layout_marginRight="@dimen/margin_twentyfive"
+                        android:fontFamily="@font/ssproregular"
+                        android:onClick="@{(v)->presenter.Register()}"
+                        android:text="@string/register"
+                        android:textColor="@color/white"
+                        app:buttonColor="@color/darkblue"
+                        app:cornerRadius="@dimen/margin_five"
+                        app:shadowEnabled="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:fontFamily="@font/roboto_light"
+                        android:onClick="@{(v)->loginpresenter.logIn()}"
+                        android:text="@string/signuptext"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+</layout>

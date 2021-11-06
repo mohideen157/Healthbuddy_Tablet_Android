@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradientarrythmia"
+    android:orientation="vertical"
+    tools:context=".views.activity.maisense_device.device_data.BPActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar xmlns:local="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:minHeight="?attr/actionBarSize"
+            local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <ImageView
+                android:id="@+id/imageback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_keyboard_backspace_black_24dp" />
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:fontFamily="@font/ssproregular"
+                android:text="@string/blood_pressure"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_fourteen" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_twenty"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_twenty"
+                        android:fontFamily="@font/ssproregular"
+                        android:text="@string/bp_status"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_sixteen" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_twenty"
+                        android:fontFamily="@font/ssproregular"
+                        android:text="@string/bp0"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_sixteen" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_twenty"
+                        android:fontFamily="@font/ssproregular"
+                        android:text="@string/bp1"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_sixteen" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_twenty"
+                        android:fontFamily="@font/ssproregular"
+                        android:text="@string/bp2"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_sixteen" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:fontFamily="@font/ssproregular"
+                        android:text="@string/blood_pressure"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_sixteen" />
+
+                    <RelativeLayout
+                        android:id="@+id/sys_rl"
+                        android:layout_width="@dimen/hundred_dp"
+                        android:layout_height="@dimen/hundred_dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ellipse_black">
+
+                        <TextView
+                            android:id="@+id/bp_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/margin_ten"
+                            android:fontFamily="@font/ssprobold"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/text_eighteen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/bp_tv"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/ssprolight"
+                            android:text="@string/bp_unit"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/text_eight" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/bpstatus_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:fontFamily="@font/ssproregular"
+                        android:text="@string/blood_pressure"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_sixteen" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_twenty"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/playfairdisplayregular"
+                    android:text="@string/about"
+                    android:textColor="@color/fbutton_color_belize_hole"
+                    android:textSize="@dimen/text_eighteen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ssproregular"
+                    android:text="@string/aboutbp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_fourteen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_five"
+                    android:fontFamily="@font/ssproregular"
+                    android:text="@string/aboutbpinfo"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_fourteen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_five"
+                    android:fontFamily="@font/ssproregular"
+                    android:text="@string/aboutbpinfo1"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_fourteen" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

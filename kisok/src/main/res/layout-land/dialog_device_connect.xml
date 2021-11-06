@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/margin_threehundread"
+    android:layout_height="@dimen/margin_threehundread"
+    android:background="@color/white"
+    app:cardElevation="@dimen/margin_ten"
+    android:layout_margin="@dimen/margin_twenty"
+    android:layout_gravity="center"
+    app:cardCornerRadius="@dimen/margin_ten">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/margin_hundreadfifty"
+            android:layout_height="@dimen/margin_hundreadfifty"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_ten"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:layout_marginTop="@dimen/margin_ten"
+            android:layout_marginEnd="@dimen/margin_ten"
+            android:layout_marginRight="@dimen/margin_ten"
+            app:srcCompat="@drawable/bandimg" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_ten"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:layout_marginTop="@dimen/margin_ten"
+            android:textAlignment="center"
+            android:layout_marginEnd="@dimen/margin_ten"
+            android:layout_marginRight="@dimen/margin_ten"
+            android:fontFamily="@font/robotoregular"
+            android:text="Are you sure you want connect this device?"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_eighteen" />
+
+
+        <indg.com.cover2protect.util.ripple.FButton
+            android:id="@+id/btnDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/thirty"
+            android:layout_marginLeft="@dimen/thirty"
+            android:layout_marginTop="@dimen/thirty"
+            android:layout_marginEnd="@dimen/thirty"
+            android:layout_marginRight="@dimen/thirty"
+            android:layout_marginBottom="@dimen/margin_ten"
+            android:background="@drawable/rectangle"
+            android:fontFamily="@font/robotoregular"
+            android:text="Continue"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:backgroundTint="@android:color/white"
+            app:buttonColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:shadowEnabled="false" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

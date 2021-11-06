@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_fifty">
+       <androidx.appcompat.widget.Toolbar
+           android:id="@+id/toolbar"
+           android:layout_width="match_parent"
+           app:titleTextAppearance="@style/Toolbar.TitleTextNew"
+           android:background="@color/colorAccent"
+           android:layout_height="match_parent"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/contentlayout"
+        android:layout_marginTop="@dimen/margin_fifty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <indg.com.cover2protect.util.bottom_navigation.C2PBottomNavigation
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:mbn_backgroundBottomColor="@color/white"
+        app:mbn_countBackgroundColor="#ff6f00"
+        app:mbn_countTextColor="@color/colorAccent"
+        app:mbn_defaultIconColor="@color/gray"
+        app:mbn_rippleColor="#2f424242"
+        app:mbn_selectedIconColor="@color/quantum_orange"
+        app:mbn_shadowColor="#1f212121" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

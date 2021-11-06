@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradientarrythmia"
+    tools:context=".views.activity.maisense_device.device_data.ArrythmiaActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            xmlns:local="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/colorAccent"
+            local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            local:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+          <ImageView
+                android:id="@+id/imageback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_keyboard_backspace_black_24dp"/>
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/arrhythmia_label"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ralewayregular"
+                android:textSize="@dimen/text_fourteen"
+                />
+        </androidx.appcompat.widget.Toolbar>    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/margin_twenty"
+            android:layout_height="@dimen/margin_twohundread_fourty">
+            
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/margin_twenty"
+              android:textSize="@dimen/text_sixteen"
+              android:textColor="@color/white"
+              android:fontFamily="@font/ssproregular"
+              android:text="@string/arrythmiacount"/>
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/margin_twenty"
+              android:textSize="@dimen/text_sixteen"
+              android:textColor="@android:color/black"
+              android:fontFamily="@font/ssproregular"
+              android:text="@string/arrythmia0"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:textSize="@dimen/text_sixteen"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/ssproregular"
+                android:text="@string/arrythmia1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:textSize="@dimen/text_sixteen"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/ssproregular"
+                android:text="@string/arrythmia2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:textSize="@dimen/text_sixteen"
+                android:fontFamily="@font/ssproregular"
+                android:text="@string/arrythmia3"/>
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="@dimen/margin_twohundread_fourty"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:fontFamily="@font/ssproregular"
+                android:text="@string/arrhythmia_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_sixteen" />
+
+            <RelativeLayout
+                android:id="@+id/sys_rl"
+                android:layout_width="@dimen/hundred_dp"
+                android:layout_height="@dimen/hundred_dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@drawable/ellipse_black">
+
+                <TextView
+                    android:id="@+id/arrythmia_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/text_eighteen"
+                    android:fontFamily="@font/ssprobold"
+                    android:layout_marginBottom="@dimen/margin_ten"
+                    android:textColor="@color/colorAccent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/arrythmia_tv"
+                    android:layout_centerInParent="true"
+                    android:text="@string/afib_unit"
+                    android:fontFamily="@font/ssproregular"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_eight" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_twenty"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about"
+                android:fontFamily="@font/ssproregular"
+                android:textSize="@dimen/text_eighteen"
+                android:textColor="@color/fbutton_color_belize_hole"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aboutarrythmia"
+                android:fontFamily="@font/ssproregular"
+                android:textSize="@dimen/text_fourteen"
+                android:textColor="@android:color/black"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

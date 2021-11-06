@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "992923036247",
+    "firebase_url": "https://cover2protect-238417.firebaseio.com",
+    "project_id": "cover2protect-238417",
+    "storage_bucket": "cover2protect-238417.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992923036247:android:39eb88a0a4862cc6",
+        "android_client_info": {
+          "package_name": "indg.com.cover2protect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "992923036247-cvacf7vi7tvsuu9il6qbubm5tm3vr89t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "indg.com.cover2protect",
+            "certificate_hash": "e6d80b2f7892f1ef0057d207e102ae143de0be4c"
+          }
+        },
+        {
+          "client_id": "992923036247-sp4k0ruo8tvmfo2b4vf1ui97pbo1s2av.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2ddBUzKeLdb51kiMaGhJ1As8MBh8Sluo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "992923036247-sp4k0ruo8tvmfo2b4vf1ui97pbo1s2av.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

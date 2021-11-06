@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".questionnaire11">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_back1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:text="back"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_btn_curved" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Questionnaire"
+            android:textColor="@color/md_blue_500"
+            android:layout_margin="10dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:textSize="48dp">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/questionnaireimages2">
+
+        </ImageView>
+        <TextView
+            android:id="@+id/tv_vp_adp_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="11.Do you choose baked,steamed or grilled options when available,rather tahn fried foods?"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary">
+
+        </TextView>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/radioGroup"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <RadioButton
+                android:text="Yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio1"
+                android:textSize="24sp"
+                android:textColor="@color/primaryTextColor"
+                android:checked="true"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="No"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio2"
+                android:textSize="24sp"
+                android:textColor="@color/primaryTextColor"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1" />
+        </RadioGroup>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="fitEnd"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:id="@+id/next_bmisecondpagerev"
+            android:src="@drawable/bottomimg3rev"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitEnd"
+            android:background="@android:color/transparent"
+            android:id="@+id/next_bmithirdpage"
+            android:src="@drawable/bottomimg3"/>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".bgmfirsttakereading">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_back1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:text="back"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_btn_curved" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="HOW TO TAKE READING"
+            android:textColor="@color/md_blue_500"
+            android:layout_margin="10dp"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:textSize="48dp">
+        </TextView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_bmi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+
+                android:layout_margin="75dp"
+                android:layout_weight="1"
+                android:text="Step 1: Take a fresh test strip from the box and insert into the slot in monitor.
+Device will showlancet symbol."
+                android:gravity="left"
+                android:textAlignment="gravity"
+                android:textColor="@color/md_blue_500"
+                android:textSize="24dp">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/bmiweightscale1">
+
+            </ImageView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="50dp"
+            android:background="@color/white"
+            android:text="View Tutorial Video"
+            android:textColor="@color/md_blue_500"
+            android:textSize="24dp"
+            android:layout_gravity="center" >
+
+        </Button>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:id="@+id/next_bmisecondpage"
+            android:src="@drawable/bottomimg3"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

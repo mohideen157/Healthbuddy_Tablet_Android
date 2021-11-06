@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".views.fragments.History.DeviceFragment.DeviceFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_threehundread">
+
+            <com.app.progresviews.ProgressWheel
+                android:id="@+id/heartrate"
+                android:layout_width="@dimen/margin_twohundread_fourty"
+                android:layout_height="@dimen/margin_twohundread_fourty"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_seventy"
+                app:barWidth="17dp"
+                android:layout_centerInParent="true"
+                app:countText="0"
+                app:percentage="0"
+                app:rimColor="@color/greylight"
+                app:countTextColor="@android:color/black"
+                app:countTextSize="20sp"
+                app:defTextColor="@android:color/black"
+                app:defTextSize="10sp"
+                app:definitionText="Steps"
+                app:marginBtwText="15dp"
+                app:progressColor="@color/colorAccent" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@+id/progress"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:layout_marginRight="@dimen/margin_ten"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.1"
+                android:src="@drawable/icfootstep" />
+
+            <com.app.progresviews.ProgressLine
+                android:id="@+id/step_line"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                app:definition="Daily steps"
+                app:lineBarWidth="7dp"
+                app:valuePercentage="0"
+                app:lineProgressColor="@color/fbutton_default_shadow_color"
+                app:underLineColor="@android:color/darker_gray"
+                app:value="0"
+                app:valueDefTextSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@+id/progress"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:layout_marginRight="@dimen/margin_ten"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.1"
+                android:src="@drawable/ic_fit_run" />
+
+            <com.app.progresviews.ProgressLine
+                android:id="@+id/calories_line"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                app:definition="Calories"
+                app:lineBarWidth="7dp"
+                app:lineProgressColor="@color/fbutton_color_orange"
+                app:underLineColor="@android:color/darker_gray"
+                app:value="0"
+                app:valuePercentage="0"
+                app:valueDefTextSize="20sp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginBottom="@dimen/margin_seventy"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/margin_ten">
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/target"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/twelve"
+            android:tint="@color/greylight"
+            app:backgroundTint="@color/gray"
+            android:src="@drawable/pedometer_icons"
+            />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+</layout>

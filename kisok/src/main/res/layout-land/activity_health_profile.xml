@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".views.activity.health_profile.HealthProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_fiftysix">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_fiftysix"
+            android:background="@color/colorAccent"
+            android:elevation="@dimen/margin_ten"
+            android:paddingLeft="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="12">
+
+                <LinearLayout
+                    android:id="@+id/back_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_keyboard_backspace_black_24dp" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/opensansregular"
+                        android:text="@string/health"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_fourteen" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_ten"
+        android:layout_marginTop="@dimen/margin_ten"
+        android:layout_marginRight="@dimen/margin_ten"
+        android:visibility="gone"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/ripple_pedometer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:mrl_rippleAlpha="0.1"
+                app:mrl_rippleColor="@color/colorPrimary"
+                app:mrl_rippleDelayClick="true"
+                app:mrl_rippleFadeDuration="10"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/hundred_dp"
+                    android:layout_height="@dimen/hundred_dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_five"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardCornerRadius="@dimen/margin_ten"
+                    app:cardElevation="@dimen/margin_ten">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin_fifty"
+                                android:layout_height="@dimen/margin_fifty"
+                                android:layout_gravity="center"
+                                android:src="@drawable/pedometer_icons" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_ten"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="@string/pedometer_title"
+                                android:textColor="@color/defaultTextColor"
+                                android:textSize="@dimen/text_ten" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/ripple_nutritionhistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:mrl_rippleAlpha="0.1"
+                app:mrl_rippleColor="@color/colorPrimary"
+                app:mrl_rippleDelayClick="true"
+                app:mrl_rippleFadeDuration="10"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/hundred_dp"
+                    android:layout_height="@dimen/hundred_dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_five"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardCornerRadius="@dimen/margin_ten"
+                    app:cardElevation="@dimen/margin_ten">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin_fifty"
+                                android:layout_height="@dimen/margin_fifty"
+                                android:layout_gravity="center"
+                                android:src="@drawable/nutrition_icons" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_ten"
+                                android:fontFamily="@font/robotoregular"
+                                android:gravity="center"
+                                android:text="@string/nutrition_title"
+                                android:textColor="@color/defaultTextColor"
+                                android:textSize="@dimen/text_ten"
+
+                                />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/hhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:mrl_rippleAlpha="0.1"
+                app:mrl_rippleColor="@color/colorPrimary"
+                app:mrl_rippleDelayClick="true"
+                app:mrl_rippleFadeDuration="10"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/hundred_dp"
+                    android:layout_height="@dimen/hundred_dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_five"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardCornerRadius="@dimen/margin_ten"
+                    app:cardElevation="@dimen/margin_ten">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin_fifty"
+                                android:layout_height="@dimen/margin_fifty"
+                                android:layout_gravity="center"
+                                android:tint="@color/colorPrimary"
+                                android:src="@drawable/heartcount" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_ten"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="@string/hhi"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="@color/defaultTextColor"
+                                android:textSize="@dimen/text_ten" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_ten"
+        android:layout_marginTop="@dimen/margin_ten"
+        android:layout_marginRight="@dimen/margin_ten"
+        android:gravity="center"
+        android:visibility="gone"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_ten"
+        android:layout_marginTop="@dimen/margin_ten"
+        android:layout_marginRight="@dimen/margin_ten"
+        android:visibility="gone"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/health_Trends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:mrl_rippleAlpha="0.1"
+                app:mrl_rippleColor="@color/colorPrimary"
+                app:mrl_rippleDelayClick="true"
+                app:mrl_rippleFadeDuration="10"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/hundred_dp"
+                    android:layout_height="@dimen/hundred_dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_five"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardCornerRadius="@dimen/margin_ten"
+                    app:cardElevation="@dimen/margin_ten">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin_fifty"
+                                android:layout_height="@dimen/margin_fifty"
+                                android:layout_gravity="center"
+                                android:tint="@color/colorPrimary"
+                                android:src="@drawable/ic_prescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_ten"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="@string/reports"
+                                android:textAllCaps="true"
+                                android:textColor="@color/defaultTextColor"
+                                android:textSize="@dimen/text_ten" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/upload_ripple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:mrl_rippleAlpha="0.1"
+                app:mrl_rippleColor="@color/colorPrimary"
+                app:mrl_rippleDelayClick="true"
+                app:mrl_rippleFadeDuration="10"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/hundred_dp"
+                    android:layout_height="@dimen/hundred_dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_five"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardCornerRadius="@dimen/margin_ten"
+                    app:cardElevation="@dimen/margin_ten">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin_fifty"
+                                android:layout_height="@dimen/margin_fifty"
+                                android:layout_gravity="center"
+                                android:tint="@color/colorPrimary"
+                                android:src="@drawable/ic_cloud_upload_black_24dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_ten"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="@string/ocr"
+                                android:layout_marginLeft="@dimen/margin_five"
+
+                                android:textAlignment="center"
+                                android:textColor="@color/defaultTextColor"
+                                android:textSize="@dimen/text_ten" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/cal_ripple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:mrl_rippleAlpha="0.1"
+                app:mrl_rippleColor="@color/colorPrimary"
+                app:mrl_rippleDelayClick="true"
+                app:mrl_rippleFadeDuration="10"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/hundred_dp"
+                    android:layout_height="@dimen/hundred_dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_five"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardCornerRadius="@dimen/margin_ten"
+                    app:cardElevation="@dimen/margin_ten">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin_fifty"
+                                android:layout_height="@dimen/margin_fifty"
+                                android:layout_gravity="center"
+                                android:tint="@color/colorPrimary"
+                                android:src="@drawable/ic_dietq1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_ten"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="@string/calories_title"
+                                android:textColor="@color/defaultTextColor"
+                                android:textSize="@dimen/text_ten" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_ten"
+        android:layout_marginTop="@dimen/margin_ten"
+        android:layout_marginRight="@dimen/margin_ten"
+        android:gravity="center"
+        android:visibility="gone"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal"
+     android:gravity="center"
+     android:visibility="gone">
+     <FrameLayout
+         android:layout_width="0dp"
+         android:layout_height="1px"
+         android:layout_weight="1"
+         android:background="@color/colorPrimaryDark"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Devices"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"/>
+     <FrameLayout
+         android:layout_width="0dp"
+         android:layout_height="1px"
+         android:layout_weight="1"
+         android:background="@color/colorPrimaryDark"/>
+
+ </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_ten"
+        android:layout_marginTop="@dimen/margin_ten"
+        android:layout_marginRight="@dimen/margin_ten"
+        android:orientation="horizontal"
+        android:weightSum="2">
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_weight="2"
+    android:gravity="center"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:orientation="vertical">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/ripple_bp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:mrl_rippleAlpha="0.1"
+                app:mrl_rippleColor="@color/colorPrimary"
+                app:mrl_rippleDelayClick="true"
+                app:mrl_rippleFadeDuration="10"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_five"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardCornerRadius="@dimen/margin_ten"
+                    app:cardElevation="@dimen/margin_ten">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/bpicon"
+                                android:tint="@color/colorPrimary"
+                                android:tintMode="src_atop"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_ten"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="@string/blood_pressure"
+                                android:textColor="@color/defaultTextColor"
+                                android:textSize="15dp" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/ripple_glucose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:mrl_rippleAlpha="0.1"
+                app:mrl_rippleColor="@color/colorPrimary"
+                app:mrl_rippleDelayClick="true"
+                app:mrl_rippleFadeDuration="10"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_five"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardCornerRadius="@dimen/margin_ten"
+                    app:cardElevation="@dimen/margin_ten">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:layout_gravity="center"
+                                android:tint="@color/colorPrimary"
+                                android:tintMode="src_atop"
+                                android:src="@drawable/bgmicon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_ten"
+                                android:fontFamily="@font/robotoregular"
+                                android:gravity="center"
+                                android:text="@string/measuring_blood_glucose"
+                                android:textColor="@color/defaultTextColor"
+                                android:textSize="15dp"
+
+                                />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:orientation="vertical">
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/ripple_bmi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:mrl_rippleAlpha="0.1"
+                app:mrl_rippleColor="@color/colorPrimary"
+                app:mrl_rippleDelayClick="true"
+                app:mrl_rippleFadeDuration="10"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_five"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardCornerRadius="@dimen/margin_ten"
+                    app:cardElevation="@dimen/margin_ten">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/weightscaleicon"
+                                android:tint="@color/colorPrimary"
+                                android:tintMode="src_atop" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_ten"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="@string/bmi_txt"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="@color/defaultTextColor"
+                                android:textSize="15dp" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/ripple_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:mrl_rippleAlpha="0.1"
+                app:mrl_rippleColor="@color/colorPrimary"
+                app:mrl_rippleDelayClick="true"
+                app:mrl_rippleFadeDuration="10"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/hundred_dp"
+                    android:layout_height="@dimen/hundred_dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_five"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardCornerRadius="@dimen/margin_ten"
+                    app:cardElevation="@dimen/margin_ten">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin_fifty"
+                                android:layout_height="@dimen/margin_fifty"
+                                android:layout_gravity="center"
+                                android:tint="@color/colorPrimary"
+                                android:tintMode="src_atop"
+                                android:src="@drawable/ic_activity" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_ten"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="Physical Activity"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="@color/defaultTextColor"
+                                android:textSize="@dimen/text_ten" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+        <Button
+            android:id="@+id/button_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@drawable/bg_btn_curved"
+            android:textColor="@color/white"
+            android:text="Logout" />
+
+    </LinearLayout>
+
+</LinearLayout>

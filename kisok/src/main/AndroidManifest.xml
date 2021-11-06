@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="indg.com.cover2protect">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.microphone" />
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:name=".views.application.Cover2ProtectApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+        <activity android:name=".questionnaire_thankyoupage"></activity>
+        <activity android:name=".questionnaire14" />
+        <activity android:name=".questionnaire13" />
+        <activity android:name=".questionnaire12" />
+        <activity android:name=".questionnaire11" />
+        <activity android:name=".questionnaire10" />
+        <activity android:name=".questionnaire9" />
+        <activity android:name=".questionnaire8" />
+        <activity
+            android:name=".ui.login.questionnaire8"
+            android:label="@string/title_activity_questionnaire8" />
+        <activity android:name=".questionnaire7" />
+        <activity android:name=".questionnaire6" />
+        <activity android:name=".questionnaire5" />
+        <activity android:name=".questionnaire4" />
+        <activity android:name=".questionnaire3" />
+        <activity android:name=".questionnaire2" />
+        <activity android:name=".questionnaire1" />
+        <activity android:name=".bgmseventakereading" />
+        <activity android:name=".bgmsixtakereading" />
+        <activity android:name=".bgmfivetakereading" />
+        <activity android:name=".bgmfourtakereading" />
+        <activity android:name=".bgmthirdtakereading" />
+        <activity android:name=".bgmsecondtakereading" />
+        <activity android:name=".bgmfirsttakereading" />
+        <activity android:name=".bpthirdtakereading" />
+        <activity android:name=".bpsecondtakereading" />
+        <activity android:name=".bpfirsttakereading" />
+        <activity android:name=".bmifourtakereading" />
+        <activity android:name=".bmithirdtakereading" />
+        <activity android:name=".bmisecondtakereading" />
+        <activity android:name=".bmifirsttakereading" />
+        <activity android:name=".wellness_second" />
+        <activity android:name=".wellness_first" />
+        <activity android:name=".views.activity.device2.HeartRateTest.HeartRateTest" />
+        <activity android:name=".views.activity.device2.HistoryActivity" />
+
+        <service
+            android:name=".SampleBleService"
+            android:enabled="true"
+            android:exported="true"
+            android:process="indg.com.cover2protect.SampleBleService">
+            <intent-filter>
+                <action android:name="com.sxr.sdk.ble.BluetoothLeService.SampleBleService" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".views.activity.device2.DeviceScanResultActivity" />
+        <activity android:name=".views.activity.scandevice.ScanActivity" />
+        <activity android:name=".views.activity.health_profile.HHIActivity" />
+        <activity android:name=".views.activity.health_report.HealthReportInfoActivity" />
+        <activity android:name=".views.activity.health_report.HealthReportActivity" />
+        <activity android:name=".views.activity.forgot_password.NewPasswordActivity" />
+        <activity android:name=".views.activity.splash.Splash2Activity" />
+        <activity
+            android:name=".views.activity.upload_file.UploadFileActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".data.permissions.PermissionsActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".views.activity.registration.otp_registration_activity.Registration_OTPActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".views.activity.pedometer.add_session_activity.AddActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".views.activity.pedometer.history.HistoryActivity"
+            android:excludeFromRecents="true" />
+        <activity
+            android:name=".views.activity.pedometer.PedometerActivity"
+            android:label="@string/title_activity_pedometer"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".views.activity.deviceConnection.kisok.QuestionnaireActivity"
+            android:label="@string/title_activity_pedometer"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".views.activity.health_profile.HealthProfileActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".views.activity.login.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".views.activity.splash.SplashActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+<activity
+            android:name=".util.crash_handle.CustomErrorActivity"
+            android:label="@string/error_title"
+            android:process=":error_activity" />
+        <activity
+            android:name=".util.crash_handle.activity.DefaultErrorActivity"
+            android:process=":error_activity" />
+
+        <provider
+            android:name=".util.crash_handle.provider.CaocInitProvider"
+            android:authorities="${applicationId}.customactivityoncrashinitprovider"
+            android:exported="false"
+            android:initOrder="101" />
+        -->
+        <activity
+            android:name=".views.activity.registration.RegisterActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".views.activity.splash.IntroActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".views.activity.health_profile.CaloriesTrends"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".views.activity.home.ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".views.activity.deviceConnection.bpMonitor.ActBpChooseDevice"
+            android:label="@string/title_activity_profile"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".views.activity.deviceConnection.bpMonitor.ActBpDisplay"
+            android:label="@string/title_activity_profile"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".views.activity.deviceConnection.sugarMonitor.ActBgmRetriveData"
+            android:label="@string/title_activity_profile"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.getmedcheck.activity.fitBitDashBoard.ActFitbitDashBoard"
+            android:label="@string/title_activity_profile"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="fitbitpermissioncallback"
+                    android:pathPattern=".*"
+                    android:scheme="c2p" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".views.activity.result_view.ResultActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".views.activity.guide_activity.GuideActivity" />
+        <activity
+            android:name=".views.activity.forgot_password.ForgotPassActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".views.activity.forgot_password.ResetPasswordActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.getmedcheck.activity.sugarMonitor.ActBgmChooseDevice"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.getmedcheck.activity.sugarMonitor.ActBgmDisplay"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".views.activity.deviceConnection.bpMonitor.ActBpRetriveData"
+            android:screenOrientation="landscape" />
+
+        <receiver
+            android:name=".helper.SMSBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="2eeca27a18fd324ac9f1f8d1c5729d712d735af4" />
+
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notifications_black_24dp" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <service
+            android:name=".data.fcm.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".views.activity.deviceConnection.bmiScale.lifesense.ble.ui.ShowMeasureDataActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".views.activity.deviceConnection.bmiScale.lifesense.ble.ui.ActWeightScale"
+            android:theme="@android:style/Theme.Holo.Light" />
+        <activity android:name=".views.activity.deviceConnection.bmiScale.ActDualLineGraph" />
+        <activity
+            android:name=".views.activity.deviceConnection.bmiScale.ActBmiScale"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".views.activity.deviceConnection.kisok.kioskDash"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".views.activity.deviceConnection.kisok.QuestionnaireActivityJava"
+            android:screenOrientation="landscape" />
+
+        <receiver android:name=".views.activity.deviceConnection.bmiScale.lifesense.ble.ui.NetworkStatusChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

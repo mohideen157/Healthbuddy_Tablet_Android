@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorAccent"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/upload_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/margin_fourty"
+                    android:visibility="visible">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image"
+                        android:layout_width="@dimen/margin_hundreadfifty"
+                        android:layout_height="@dimen/margin_hundreadfifty"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_twenty"
+                        android:src="@drawable/report_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:fontFamily="@font/ssprolight"
+                        android:text="@string/uploadyourprescription_report"
+                        android:textColor="@color/defaultTextColor"
+                        android:textSize="@dimen/text_twenty" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:fontFamily="@font/ssprolight"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_ten"
+                        android:divider="@null"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:reverseLayout="false">
+
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/file_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margin_fifteen"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_seventy"
+                            app:cardBackgroundColor="#F5F5F5"
+                            app:cardCornerRadius="@dimen/margin_five"
+                            app:cardElevation="@dimen/margin_two">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".3">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/margin_twentyfive"
+                                        android:layout_height="@dimen/margin_twentyfive"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/heartcount" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.4">
+
+                                    <TextView
+                                        android:id="@+id/heart_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_five"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:text="@string/heart_rate"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/defaultTextColor"
+                                        android:textSize="@dimen/text_fourteen" />
+
+                                    <EditText
+                                        android:id="@+id/heart_et"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_ten"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:layout_toRightOf="@id/heart_tv"
+                                        android:textAllCaps="true"
+                                        android:maxLength="5"
+                                        android:inputType="numberDecimal"
+                                        android:textColor="@color/defaultTextColor"
+                                        android:textSize="@dimen/text_fourteen" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".3">
+
+                                    <ImageView
+                                        android:id="@+id/hr_status"
+                                        android:layout_width="@dimen/margin_fifteen"
+                                        android:layout_height="@dimen/margin_fifteen"
+                                        android:layout_centerInParent="true"
+                                         />
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_seventy"
+                            android:layout_marginTop="@dimen/margin_five"
+                            app:cardBackgroundColor="#F5F5F5"
+                            app:cardCornerRadius="@dimen/margin_five"
+                            app:cardElevation="@dimen/margin_two">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".3">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/margin_twentyfive"
+                                        android:layout_height="@dimen/margin_twentyfive"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/systolic" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.4">
+
+                                    <TextView
+                                        android:id="@+id/bp_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_five"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:text="@string/BP"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/defaultTextColor"
+                                        android:textSize="@dimen/text_fourteen" />
+
+                                    <EditText
+                                        android:id="@+id/bp_et"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_ten"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:layout_toRightOf="@id/bp_tv"
+                                        android:textAllCaps="true"
+                                        android:maxLength="8"
+                                        android:inputType="numberDecimal"
+                                        android:textColor="@color/defaultTextColor"
+                                        android:textSize="@dimen/text_fourteen" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".3">
+
+                                    <ImageView
+                                        android:id="@+id/bp_status"
+                                        android:layout_width="@dimen/margin_fifteen"
+                                        android:layout_height="@dimen/margin_fifteen"
+                                        android:layout_centerInParent="true" />
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_seventy"
+                            android:layout_marginTop="@dimen/margin_five"
+                            app:cardBackgroundColor="#F5F5F5"
+                            app:cardCornerRadius="@dimen/margin_five"
+                            app:cardElevation="@dimen/margin_two">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".3">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/margin_twentyfive"
+                                        android:layout_height="@dimen/margin_twentyfive"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/sugarpp_img" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.4">
+
+                                    <TextView
+                                        android:id="@+id/glucose_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_five"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:text="@string/glucosef"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/defaultTextColor"
+                                        android:textSize="@dimen/text_fourteen" />
+                                    <EditText
+                                        android:id="@+id/glucose_et"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_ten"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:layout_toRightOf="@id/glucose_tv"
+                                        android:textAllCaps="true"
+                                        android:maxLength="5"
+                                        android:inputType="numberDecimal"
+                                        android:textColor="@color/defaultTextColor"
+                                        android:textSize="@dimen/text_fourteen" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".3">
+
+                                    <ImageView
+                                        android:id="@+id/sf_status"
+                                        android:layout_width="@dimen/margin_fifteen"
+                                        android:layout_height="@dimen/margin_fifteen"
+                                        android:layout_centerInParent="true" />
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_seventy"
+                            android:layout_marginTop="@dimen/margin_five"
+                            app:cardBackgroundColor="#F5F5F5"
+                            app:cardCornerRadius="@dimen/margin_five"
+                            app:cardElevation="@dimen/margin_two">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".3">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/margin_twentyfive"
+                                        android:layout_height="@dimen/margin_twentyfive"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/sugarpp_img" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.4">
+
+                                    <TextView
+                                        android:id="@+id/glucose_pp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_five"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:text="@string/glucosepp"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/defaultTextColor"
+                                        android:textSize="@dimen/text_fourteen" />
+
+                                    <EditText
+                                        android:id="@+id/glucose_pp_et"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_ten"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:layout_toRightOf="@id/glucose_pp"
+                                        android:textAllCaps="true"
+                                        android:maxLength="5"
+                                        android:inputType="numberDecimal"
+                                        android:textColor="@color/defaultTextColor"
+                                        android:textSize="@dimen/text_fourteen" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".3">
+
+                                    <ImageView
+                                        android:id="@+id/snf_status"
+                                        android:layout_width="@dimen/margin_fifteen"
+                                        android:layout_height="@dimen/margin_fifteen"
+                                        android:layout_centerInParent="true"/>
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_seventy"
+                            android:layout_marginTop="@dimen/margin_five"
+                            app:cardBackgroundColor="#F5F5F5"
+                            app:cardCornerRadius="@dimen/margin_five"
+                            app:cardElevation="@dimen/margin_two">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".3">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/margin_twentyfive"
+                                        android:layout_height="@dimen/margin_twentyfive"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_image1" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.4">
+
+                                    <TextView
+                                        android:id="@+id/tri_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_five"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:text="@string/triglyceride"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/defaultTextColor"
+                                        android:textSize="@dimen/text_fourteen" />
+
+                                    <EditText
+                                        android:id="@+id/tri_et"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_ten"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:layout_toRightOf="@id/tri_tv"
+                                        android:textAllCaps="true"
+                                        android:maxLength="5"
+                                        android:inputType="numberDecimal"
+                                        android:textColor="@color/defaultTextColor"
+                                        android:textSize="@dimen/text_fourteen" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".3">
+
+                                    <ImageView
+                                        android:id="@+id/tri_status"
+                                        android:layout_width="@dimen/margin_fifteen"
+                                        android:layout_height="@dimen/margin_fifteen"
+                                        android:layout_centerInParent="true"/>
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_seventy"
+                            android:layout_marginTop="@dimen/margin_five"
+                            app:cardBackgroundColor="#F5F5F5"
+                            app:cardCornerRadius="@dimen/margin_five"
+                            app:cardElevation="@dimen/margin_two">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".3">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/margin_twentyfive"
+                                        android:layout_height="@dimen/margin_twentyfive"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/sugarpp_img" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.4">
+
+                                    <TextView
+                                        android:id="@+id/hdl_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_five"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:text="@string/hdlcholestrol"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/defaultTextColor"
+                                        android:textSize="@dimen/text_fourteen" />
+
+                                    <EditText
+                                        android:id="@+id/hdl_et"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_ten"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:layout_toRightOf="@id/hdl_tv"
+                                        android:textAllCaps="true"
+                                        android:maxLength="5"
+                                        android:inputType="numberDecimal"
+                                        android:textColor="@color/defaultTextColor"
+                                        android:textSize="@dimen/text_fourteen" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".3">
+
+                                    <ImageView
+                                        android:id="@+id/hdl_status"
+                                        android:layout_width="@dimen/margin_fifteen"
+                                        android:layout_height="@dimen/margin_fifteen"
+                                        android:layout_centerInParent="true" />
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_seventy"
+                            android:layout_marginTop="@dimen/margin_five"
+                            app:cardBackgroundColor="#F5F5F5"
+                            app:cardCornerRadius="@dimen/margin_five"
+                            app:cardElevation="@dimen/margin_two">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".3">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/margin_twentyfive"
+                                        android:layout_height="@dimen/margin_twentyfive"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/sugarpp_img" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.4">
+
+                                    <TextView
+                                        android:id="@+id/ldl_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_five"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:text="@string/ldlcholestrol"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/defaultTextColor"
+                                        android:textSize="@dimen/text_fourteen" />
+
+                                    <EditText
+                                        android:id="@+id/ldl_et"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_ten"
+                                        android:fontFamily="@font/ssproregular"
+                                        android:layout_toRightOf="@id/ldl_tv"
+                                        android:textAllCaps="true"
+                                        android:maxLength="5"
+                                        android:inputType="numberDecimal"
+                                        android:textColor="@color/defaultTextColor"
+                                        android:textSize="@dimen/text_fourteen" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".3">
+
+                                    <ImageView
+                                        android:id="@+id/ldl_status"
+                                        android:layout_width="@dimen/margin_fifteen"
+                                        android:layout_height="@dimen/margin_fifteen"
+                                        android:layout_centerInParent="true" />
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <indg.com.cover2protect.util.ripple.FButton
+                            android:id="@+id/submit"
+                            android:layout_width="match_parent"
+                            app:shadowEnabled="false"
+                            android:fontFamily="@font/ssproregular"
+                            android:textColor="@color/white"
+                            android:text="@string/submit"
+                            app:buttonColor="@color/colorAccent"
+                            android:layout_marginTop="@dimen/margin_twenty"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/button_ll"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2">
+
+        <indg.com.cover2protect.util.ripple.FButton
+            android:id="@+id/gallery_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_fifty"
+            android:layout_weight="1"
+            android:fontFamily="@font/ssproregular"
+            android:text="@string/uploadimage"
+            android:textColor="@color/white"
+            app:buttonColor="@color/graph1"
+            app:cornerRadius="0dp"
+            app:shadowEnabled="false" />
+
+        <indg.com.cover2protect.util.ripple.FButton
+            android:id="@+id/camera_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_fifty"
+            android:layout_weight="1"
+            android:fontFamily="@font/ssproregular"
+            android:text="@string/uploadpdf"
+            android:textColor="@color/white"
+            app:buttonColor="@color/colorAccent"
+            app:cornerRadius="0dp"
+            app:shadowEnabled="false" />
+
+
+    </LinearLayout>
+
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:visibility="gone"
+        app:indicatorColor="@color/colorAccent"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/margin_fourty"
+        android:layout_width="@dimen/sixty"
+        android:layout_height="@dimen/sixty"
+        app:indicatorName="BallSpinFadeLoaderIndicator"
+        />
+
+
+</RelativeLayout>
+</layout>

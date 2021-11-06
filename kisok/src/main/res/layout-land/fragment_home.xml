@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".views.fragments.History.HomeFragment.HomeFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_hundreadfifty"
+                    android:layout_marginLeft="-10dp"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginRight="-10dp"
+                    android:background="@drawable/rect_blue">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/anim"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/margin_ten"
+                                android:layout_marginBottom="@dimen/margin_two"
+                                app:lottie_autoPlay="true"
+                                app:lottie_fileName="bluetooth.json"
+                                app:lottie_loop="true" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.4">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/margin_ten"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_twenty"
+                                    android:fontFamily="@font/robotoregular"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_twenty" />
+
+                                <TextView
+                                    android:id="@+id/mac"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_five"
+                                    android:fontFamily="@font/roboto_light"
+                                    android:textColor="@color/gray"
+                                    android:textSize="@dimen/text_fourteen" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <indg.com.cover2protect.util.ripple.FButton
+                    android:id="@+id/unbind_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sixty"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="@string/unbindevice"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    app:buttonColor="@color/white"
+                    app:shadowEnabled="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <indg.com.cover2protect.util.ripple.FButton
+                        android:id="@+id/devicesearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/sixty"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:drawableLeft="@drawable/ic_developer_mode_black_24dp"
+                        android:drawableRight="@drawable/ic_navigate_next_black_24dp"
+                        android:drawablePadding="@dimen/margin_fifteen"
+                        android:drawableTint="@color/gray"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingLeft="@dimen/margin_ten"
+                        android:text="@string/devicesearch"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/gray"
+                        app:buttonColor="@color/white"
+                        app:cornerRadius="0dp"
+                        app:shadowEnabled="false" />
+
+
+                    <indg.com.cover2protect.util.ripple.FButton
+                        android:id="@+id/heartratetest"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/sixty"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:drawableLeft="@drawable/heartcount"
+                        android:drawableRight="@drawable/ic_navigate_next_black_24dp"
+                        android:drawablePadding="@dimen/margin_fifteen"
+                        android:drawableTint="@color/fbutton_color_pomegranate"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingLeft="@dimen/margin_ten"
+                        android:text="@string/autoheartrate"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/gray"
+                        app:buttonColor="@color/white"
+                        app:cornerRadius="0dp"
+                        app:shadowEnabled="false" />
+
+                    <indg.com.cover2protect.util.ripple.FButton
+                        android:id="@+id/bloodpressure_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/sixty"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:drawableLeft="@drawable/heartcount"
+                        android:drawableRight="@drawable/ic_navigate_next_black_24dp"
+                        android:drawablePadding="@dimen/margin_fifteen"
+                        android:drawableTint="@color/gray"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingLeft="@dimen/margin_ten"
+                        android:text="@string/turnbloodpressure"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/gray"
+                        app:buttonColor="@color/white"
+                        app:cornerRadius="0dp"
+                        app:shadowEnabled="false" />
+
+                    <indg.com.cover2protect.util.ripple.FButton
+                        android:id="@+id/bloodpressureoff_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/sixty"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:drawableLeft="@drawable/heartcount"
+                        android:drawableRight="@drawable/ic_navigate_next_black_24dp"
+                        android:drawablePadding="@dimen/margin_fifteen"
+                        android:drawableTint="@color/gray"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingLeft="@dimen/margin_ten"
+                        android:text="@string/turnbloodpressureoff"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/gray"
+                        app:buttonColor="@color/white"
+                        app:cornerRadius="0dp"
+                        app:shadowEnabled="false" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

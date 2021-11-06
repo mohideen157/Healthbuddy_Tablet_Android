@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".views.activity.trends.hr_trends.HrTrendsActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/graph_ll"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:weightSum="2"
+                        android:layout_margin="@dimen/margin_ten"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/fbutton_color_belize_hole"
+                                android:textSize="@dimen/text_eighteen"
+                                android:fontFamily="@font/ssprolight"
+                                android:text="@string/start_date"/>
+
+                            <TextView
+                                android:id="@+id/startdate_tv"
+                                android:layout_marginTop="@dimen/margin_ten"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/defaultTextColor"
+                                android:textSize="@dimen/text_sixteen"
+                                android:fontFamily="@font/ssproregular"
+                                android:text="@string/start_date"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/text_eighteen"
+                                android:textColor="@color/fbutton_color_belize_hole"
+                                android:fontFamily="@font/ssprolight"
+                                android:text="@string/end_date"/>
+                            <TextView
+                                android:id="@+id/enddate_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_ten"
+                                android:textSize="@dimen/text_sixteen"
+                                android:textColor="@color/defaultTextColor"
+                                android:fontFamily="@font/ssproregular"
+                                android:text="@string/end_date"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/hr_lineChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_fourhundread" />
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/nodate_ll"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/anim"
+                            android:layout_width="@dimen/margin_twohundread"
+                            android:layout_height="@dimen/margin_twohundread"
+                            app:lottie_autoPlay="true"
+                            android:layout_centerInParent="true"
+                            app:lottie_loop="true"
+                            app:lottie_fileName="empty-box.json"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/anim"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/colorAccent"
+                            android:text="@string/nodata"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</LinearLayout>

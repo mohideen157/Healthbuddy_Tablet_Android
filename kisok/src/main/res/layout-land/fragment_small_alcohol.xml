@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/newbackground"
+    tools:context=".views.fragments.alcohol.small_dosage.SmallAlcoholFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/img"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:layout_marginRight="@dimen/margin_ten"
+            android:layout_marginTop="@dimen/margin_fourty"
+            android:weightSum="12">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/margin_five"
+                android:layout_weight="3">
+
+                <indg.com.cover2protect.util.ripple.FButton
+                    android:id="@+id/btn_daily"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/daily_txt"
+                    android:layout_marginLeft="@dimen/margin_five"
+                    android:layout_marginRight="@dimen/margin_five"
+                    android:fontFamily="@font/montserratregular"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:buttonColor="@color/colorPrimary"
+                    app:shadowEnabled="false"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/margin_five"
+                android:layout_weight="3">
+
+                <indg.com.cover2protect.util.ripple.FButton
+                    android:id="@+id/btn_weekly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/weekly_txt"
+                    android:layout_marginLeft="@dimen/margin_five"
+                    android:layout_marginRight="@dimen/margin_five"
+                    android:fontFamily="@font/montserratregular"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:buttonColor="@color/colorPrimary"
+                    app:shadowEnabled="false"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/margin_five"
+                android:layout_weight="3">
+
+                <indg.com.cover2protect.util.ripple.FButton
+                    android:id="@+id/btn_monthly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/monthly_txt"
+                    android:layout_marginLeft="@dimen/margin_five"
+                    android:layout_marginRight="@dimen/margin_five"
+                    android:fontFamily="@font/montserratregular"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:buttonColor="@color/colorPrimary"
+                    app:shadowEnabled="false"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+                <indg.com.cover2protect.util.ripple.FButton
+                    android:id="@+id/btn_yearly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/yearly_txt"
+                    android:layout_marginLeft="@dimen/margin_five"
+                    android:layout_marginRight="@dimen/margin_five"
+                    android:fontFamily="@font/montserratregular"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:buttonColor="@color/colorPrimary"
+                    app:shadowEnabled="false"
+
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_fourty"
+            android:orientation="vertical">
+
+            <indg.com.cover2protect.util.badge_count.BadgeHolderLayout
+                android:id="@+id/view2"
+                android:layout_width="@dimen/margin_hundreadfifty"
+                android:layout_height="@dimen/margin_hundreadfifty"
+                android:layout_centerInParent="true"
+                app:bhl_badge_radius="@dimen/margin_twohundreadsixty"
+                app:bhl_default_badge_background="@color/colorAccent"
+                app:bhl_text_color="@android:color/white"
+                app:bhl_text_size="@dimen/text_thirteen">
+
+                <ImageView
+                    android:layout_width="@dimen/largeglass_width"
+                    android:layout_height="@dimen/largeglass_height"
+                    android:src="@drawable/ic_smallglass" />
+            </indg.com.cover2protect.util.badge_count.BadgeHolderLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hundred_dp"
+            android:weightSum="12">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/addmore_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/add_img"
+                        android:layout_height="@dimen/add_img"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_add" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_five"
+                        android:fontFamily="@font/montserratregular"
+                        android:text="@string/Addmore_txt"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_fourteen" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/remove_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/add_img"
+                        android:layout_height="@dimen/add_img"
+                        android:layout_gravity="center"
+                        android:src="@drawable/remove_ic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_five"
+                        android:fontFamily="@font/montserratregular"
+                        android:text="@string/removemore_txt"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_fourteen" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+</layout>

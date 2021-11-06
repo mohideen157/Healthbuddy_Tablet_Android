@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="data"
+            type="indg.com.cover2protect.model.nutrition.nutitionmodel.Common" />
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/item_search_common_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_five">
+
+        <ImageView
+            android:id="@+id/item_search_common_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_add_circle_black_24dp" />
+
+        <TextView
+            android:id="@+id/item_search_common_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_twenty"
+            android:gravity="center"
+            android:fontFamily="@font/ssproregular"
+            android:text="@{data.food_name}"
+            android:textColor="@color/default_textColor"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+</layout>

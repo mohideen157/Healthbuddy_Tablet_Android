@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ds="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/main_activity_view"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".views.activity.pedometer.add_session_activity.AddActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_ten"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_fifty">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sixty"
+                android:background="@drawable/rect_signup">
+
+                <Spinner
+                    android:id="@+id/spinner_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_five"
+                    android:entries="@array/activities"></Spinner>
+
+            </LinearLayout>
+
+            <indg.com.cover2protect.util.material_text_view.MaterialTextView
+                android:id="@+id/date_tv"
+                android:layout_width="match_parent"
+                app:mtv_labelText="@string/date"
+                app:mtv_labelTextColor="@color/gray"
+                app:mtv_contentText="@string/date"
+                app:mtv_backgroundColor="@color/greylight"
+                app:mtv_keepLabelSpacing="true"
+                app:mtv_contentTextColor="@color/defaultTextColor"
+                android:layout_height="wrap_content">
+
+
+            </indg.com.cover2protect.util.material_text_view.MaterialTextView>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_twenty"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <indg.com.cover2protect.util.material_text_view.MaterialTextView
+                        android:id="@+id/starttime_tv"
+                        android:layout_width="match_parent"
+                        app:mtv_labelText="@string/starttime"
+                        app:mtv_labelTextColor="@color/gray"
+                        app:mtv_contentText="@string/starttime"
+                        app:mtv_backgroundColor="@color/greylight"
+                        app:mtv_keepLabelSpacing="true"
+                        app:mtv_contentTextColor="@color/defaultTextColor"
+                        android:layout_height="wrap_content">
+
+
+                    </indg.com.cover2protect.util.material_text_view.MaterialTextView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <indg.com.cover2protect.util.material_text_view.MaterialTextView
+                        android:id="@+id/endtime_tv"
+                        android:layout_width="match_parent"
+                        app:mtv_labelText="@string/select_Endtime"
+                        app:mtv_labelTextColor="@color/gray"
+                        app:mtv_contentText="@string/select_Endtime"
+                        app:mtv_backgroundColor="@color/greylight"
+                        app:mtv_keepLabelSpacing="true"
+                        app:mtv_contentTextColor="@color/defaultTextColor"
+                        android:layout_height="wrap_content">
+
+
+                    </indg.com.cover2protect.util.material_text_view.MaterialTextView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:background="@color/greylight">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_ten"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:fontFamily="@font/robotoregular"
+                    android:hint="Title"
+                    android:textSize="@dimen/text_fourteen"
+                    app:met_baseColor="#007688"
+                    app:met_clearButton="true"
+                    app:met_errorColor="@color/defaultTextColor"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelAlwaysShown="true"
+                    app:met_floatingLabelAnimating="true"
+                    app:met_floatingLabelText="Title"
+                    app:met_floatingLabelTextColor="@color/defaultTextColor"
+                    app:met_helperTextColor="#795548"
+                    app:met_hideUnderline="true"
+                    app:met_primaryColor="#2196F3"
+                    app:met_textColor="@color/defaultTextColor"
+                    app:met_textColorHint="@color/defaultTextColor"
+                    app:met_underlineColor="#003587" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:background="@color/greylight">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_ten"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:fontFamily="@font/robotoregular"
+                    android:hint="Description"
+                    android:textSize="@dimen/text_fourteen"
+                    app:met_baseColor="#007688"
+                    app:met_clearButton="true"
+                    app:met_errorColor="@color/defaultTextColor"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelAlwaysShown="true"
+                    app:met_floatingLabelAnimating="true"
+                    app:met_floatingLabelText="Description"
+                    app:met_floatingLabelTextColor="@color/defaultTextColor"
+                    app:met_helperTextColor="#795548"
+                    app:met_hideUnderline="true"
+                    app:met_primaryColor="#2196F3"
+                    app:met_textColor="@color/defaultTextColor"
+                    app:met_textColorHint="@color/defaultTextColor"
+                    app:met_underlineColor="#003587" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:layout_marginBottom="@dimen/margin_five"
+                android:background="@color/greylight">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/steps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_ten"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:fontFamily="@font/robotoregular"
+                    android:hint="Steps"
+                    android:maxLength="3"
+                    android:digits="0123456789"
+                    android:inputType="number|none"
+                    android:textSize="@dimen/text_fourteen"
+                    app:met_baseColor="#007688"
+                    app:met_clearButton="true"
+                    app:met_errorColor="@color/defaultTextColor"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelAlwaysShown="true"
+                    app:met_floatingLabelAnimating="true"
+                    app:met_floatingLabelText="Steps"
+                    app:met_floatingLabelTextColor="@color/defaultTextColor"
+                    app:met_helperTextColor="#795548"
+                    app:met_hideUnderline="true"
+                    app:met_primaryColor="#2196F3"
+                    app:met_textColor="@color/defaultTextColor"
+                    app:met_textColorHint="@color/defaultTextColor"
+                    app:met_underlineColor="#003587" />
+
+            </LinearLayout>
+
+            <indg.com.cover2protect.util.ripple.FButton
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_fifty"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:fontFamily="@font/robotoregular"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                app:buttonColor="@color/colorAccent"
+                app:shadowEnabled="false" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

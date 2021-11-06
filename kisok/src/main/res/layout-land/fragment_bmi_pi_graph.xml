@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBG">
+
+    <include
+        layout="@layout/toolbar_normal"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="3"
+    android:layout_margin="20dp">
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/chart"
+        android:layout_weight="9"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+    <Button
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:includeFontPadding="false"
+        android:padding="5dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:id="@+id/btn_bmi_history"
+        android:background="@drawable/bg_btn_curved"
+        android:text="V\ni\ne\nw\n \nH\ni\ns\nt\no\nr\ny" />
+
+</LinearLayout>
+
+
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="6">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorPrimaryBG"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryCardBg2"
+            android:padding="10dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="20dp">
+
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textSize="20dp"
+                    android:id="@+id/tv_bmi_chart_target_weight"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Target"
+                    android:layout_gravity="center"
+                    android:textSize="16dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Kg"
+                    android:textSize="20dp"
+                    android:id="@+id/tv_bmi_chart_weight_current"
+                    android:layout_gravity="center"
+                    android:textColor="@color/yellow"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current"
+                    android:textSize="16dp"
+                    android:textColor="@color/white"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Kg"
+                    android:textSize="20dp"
+                    android:id="@+id/tv_bmi_chart_weight_to_lose"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lose/Gain"
+                    android:textSize="16dp"
+                    android:textColor="@color/white"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryCardBg"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_body_fat_percentage"/>
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tv_bmi_chart_body_fat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="00"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Body Fat"
+                        android:textSize="16dp"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryBG"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="4">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_muscle_mass"/>
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_bmi_chart_muscle_mass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 %"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Muscle Mass"
+                    android:textSize="16dp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryCardBg"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="4">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:layout_margin="5dp"
+                android:tint="#FFCD23"
+                android:tintMode="src_atop"
+                android:src="@drawable/ic_bmi_yellow" />
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="start"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_bmi_chart_visceral_fat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 %"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="BMI"
+                    android:textSize="16dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            </LinearLayout>
+            <FrameLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryBG"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="4">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_body_water" />
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_bmi_chart_body_water"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 %"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Body Water"
+                    android:textSize="16dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryCardBg"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="4">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:layout_margin="5dp"
+                android:tint="#FFCD23"
+                android:tintMode="src_atop"
+                android:src="@drawable/ic_bone_mass" />
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_bmi_chart_bone_mass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 %"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bone Mass"
+                    android:layout_gravity="center"
+                    android:textSize="16dp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+            </LinearLayout>
+            <FrameLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryBG"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="4">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_bmr" />
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_bmi_chart_bmr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="BMR"
+                    android:textSize="16dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+
+</LinearLayout>

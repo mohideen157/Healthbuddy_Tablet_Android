@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="viewModel"
+            type="indg.com.cover2protect.viewmodel.heartailment_vm.HeartAilmentViewModel"/>
+
+    </data>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/newbackground"
+    tools:context=".views.activity.alcohol_ques.AlcohalActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_ten"
+        android:layout_marginRight="@dimen/margin_ten"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_ten"
+            android:weightSum="12">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_fiftysix"
+                android:layout_weight="6">
+                <com.github.lzyzsd.circleprogress.DonutProgress
+                    android:id="@+id/donut_progress"
+                    android:layout_width="@dimen/margin_fifty"
+                    android:layout_height="@dimen/margin_fifty"
+                    custom:donut_progress="30"
+                    app:donut_unfinished_color="@color/white"
+                    app:donut_finished_color="@color/fbutton_color_belize_hole"
+                    app:donut_text_size="@dimen/text_eight"
+                    app:donut_text_color="@color/white"
+                    app:donut_unfinished_stroke_width="@dimen/margin_two"
+                    app:donut_finished_stroke_width="@dimen/margin_two"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_fiftysix"
+                android:layout_weight="6"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/skip_ll"
+                    android:layout_width="@dimen/margin_seventy"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_height="@dimen/margin_fourty">
+
+                    <TextView
+                        android:id="@+id/skip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensansregular"
+                        android:text="@string/skip"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_twenty"
+            android:fontFamily="@font/ssproregular"
+            android:text="@string/heartailment_txt"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_eighteen" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_fourty">
+
+            <ImageView
+                android:layout_width="@dimen/margin_eighty"
+                android:layout_height="@dimen/margin_eighty"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_heart" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/diet_height"
+            android:layout_marginTop="@dimen/margin_twenty"
+            android:weightSum="12">
+
+            <RelativeLayout
+                android:id="@+id/yes_rl"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:layout_weight="6"
+                android:background="@drawable/rectangle_ans">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/ssproregular"
+                    android:text="@string/yes_txt"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_twenty" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/no_rl"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:layout_weight="6"
+                android:background="@drawable/rectangle_ans">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/ssproregular"
+                    android:text="@string/no_txt"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_twenty" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/forward"
+        android:layout_width="@dimen/sixty"
+        android:layout_height="@dimen/sixty"
+        android:src="@drawable/bottomimg"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+
+    <ImageView
+        android:id="@+id/backward"
+        android:layout_width="@dimen/sixty"
+        android:layout_height="@dimen/sixty"
+        android:src="@drawable/bottomimgrev"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>
+</layout>
